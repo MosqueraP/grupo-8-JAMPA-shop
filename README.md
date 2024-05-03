@@ -8,8 +8,8 @@ Shopee Cool" es un e-commerce de moda deportiva inclusiva para personas de talla
 
 ## Desarrolladores
 
--   Mosquera Córdoba, Plinio Isidro
 -   Bautista Ramírez, Alexa Ivannova
 -   Sandoval Garcia, Andres Felipe
 -   Silva Silva, Maria Victoria
 -   Villabona peña, Jennifer Daiana
+-   Mosquera Córdoba, Plinio Isidro
