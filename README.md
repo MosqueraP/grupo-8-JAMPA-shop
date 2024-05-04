@@ -1,4 +1,4 @@
-# Shopee Cool - Plataforma de Moda Deportiva Inclusiva
+# JAMPA shop - Plataforma de Moda Deportiva Inclusiva
 
 ## Descripción del proyecto
 Este proyecto tiene como objetivo crear una plataforma de comercio electrónico llamada "Shopee Cool", centrada en ofrecer moda deportiva inclusiva para personas de talla plus. A continuación, se detalla la planificación y los aspectos clave del proyecto:
