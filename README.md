@@ -13,3 +13,6 @@ Shopee Cool" es un e-commerce de moda deportiva inclusiva para personas de talla
 -   Silva Silva, Maria Victoria
 -   Villabona peña, Jennifer Daiana
 -   Mosquera Córdoba, Plinio Isidro
+
+![image](https://github.com/MosqueraP/grupo-8-shopee-cool/assets/100236783/d8373195-840e-41fa-8334-52df1e411589)
+
