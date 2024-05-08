@@ -12,10 +12,10 @@ JAMPA shop" es un e-commerce de moda deportiva inclusiva para personas de talla 
 ## Desarrolladores
 
 -   Bautista Ramírez, Alexa Ivannova
+-   Mosquera Córdoba, Plinio Isidro
 -   Sandoval Garcia, Andres Felipe
 -   Silva Silva, Maria Victoria
 -   Villabona peña, Jennifer Daiana
--   Mosquera Córdoba, Plinio Isidro
 
 
 
