@@ -1,0 +1,162 @@
+/* variables */
+:root{
+  --azul-color:#033E8C;
+  --azulClaro-color:#86CCDA;
+  --naranjaClaro-color:#F27F0C;
+  --naranjaOscuro-color:#F7AD19;
+  --gris-color:#E3E3E3;
+  --blanco-color:#FFFFFF;
+  --negro-color:#1B1B1B;
+}
+/* *FORMATEAR PAGINA */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--gris-color);
+}
+/* Contenedor principal , Por buenas practicas se hace un contenedor donde este todo el body*/
+.contenedorPrincipal{
+  width: 100vw;
+  min-height: 100vh;  
+  max-width: 1440px; /* Se va adaptar a una resolucion maxima de 1440 por ancho */
+  margin: 0 auto;
+  font-family:"Montserrat", sans-serif;
+  background-color: var(--blanco-color);
+}
+
+/* Estilos para mobile con un ancho máximo de 600px */
+@media screen and (max-width: 659px) {
+  /* Colocar sus estilos aqui */
+
+  /* tamaño del logo */
+.logo img{
+  width: 220px;
+}
+
+}
+
+/* Estilos para tablet pantallas con un ancho máximo de 1024px */
+@media screen and (min-width:660px) and (max-width: 1250px) {
+  /* Colocar sus estilos aqui */
+
+  /* tamaño del logo */
+.logo img{
+  width: 220px;
+}
+/* edicion barra de navegacion */
+.contenedorNav{
+  flex-direction:column-reverse;
+  width: 100%;
+}
+.barraNavegacion{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.barraBusqueda button{
+  width: 15%;
+}
+/* iconos */
+.iconos{
+  width: 25%;
+}
+}
+
+
+
+/* Estilos para escritorio */ 
+
+  /* Estilos para el encabezado */
+  .encabezado{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--azul-color);
+    padding: 10px;
+  }
+  /* tamaño del logo */
+  .logo img{
+    width: 320px;
+  }
+  /* edicion contenedor navegacion completo */
+  .contenedorNav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+  }
+  /* edicion contenedor buscar e iconos */
+  .contenedorBusyIco{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* barra de navegacion*/
+  .barraNavegacion{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+  }
+  .barraNavegacion a{
+    text-decoration: none;
+    color: var(--naranjaClaro-color);
+    font-size: 16px;
+  }
+  /* barra de busqueda */
+  .barraBusqueda{
+    display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.barraBusqueda input{
+  width: 100%;
+  height: auto;
+  border-radius:0 10px 10px 0px;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+}
+.barraBusqueda button{
+  border-radius:10px 0 0 10px;
+  width: 10%;
+  background-color: var(--blanco-color);
+  border: 0;
+  font-size: 25px;
+}
+.barraBusqueda i{
+  color: var(--naranjaClaro-color);
+}
+/* iconos */
+.iconos{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.icoUser{
+  color: var(--gris-color);
+  font-size: 40px;
+}
+.icoCarrito{
+  color: var(--naranjaClaro-color);
+  font-size: 40px;
+}
+
+.footer{ /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: var(--blanco-color);
+  background-color: var(--azul-color);  
+}
