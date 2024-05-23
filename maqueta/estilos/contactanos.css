@@ -6,8 +6,7 @@ Comenzar con mobile por buenas practicas */
 
 
 /* Estilos para mobile con un ancho máximo de 600px */
-@media screen and (max-width: 659px) {}
-/* Colocar sus estilos aqui */
+@media screen and (max-width: 659px) {
 
 /* Primera seccion "banner (Jen) */
 
@@ -73,19 +72,20 @@ Comenzar con mobile por buenas practicas */
 /* SECCIÓN DE INFORMACIÓN CONTACTO */
 .informacion{
   text-align: left;
+  background-color: blueviolet;
 }
 
 .info-titulo {
   display: block; /* Asegura que el span se comporte como un elemento de bloque */
   text-align: center; 
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
   font-size: 34px;
 }
 .info-contactanos{
   text-align: center;
   margin: 10px 20px;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .info-contactanos p{
@@ -103,6 +103,8 @@ Comenzar con mobile por buenas practicas */
   border-radius: 20px;
 }
 
+}
+
 /* Tercera seccion "Formulario ( Jennifer) */
 
 
@@ -110,7 +112,7 @@ Comenzar con mobile por buenas practicas */
 
 
 /* Estilos para tablet pantallas con un ancho máximo de 1024px */
-@media screen and (min-width:660px) and (max-width: 1250px) {
+@media screen and (min-width: 660px) and (max-width: 1250px) {
     /* Colocar sus estilos aqui */
 
 /* Primera seccion "banner (Jen) */
@@ -175,11 +177,16 @@ Comenzar con mobile por buenas practicas */
 
 /* Segunda seccion " Información(plinio) */
 /* SECCIÓN DE INFORMACIÓN CONTACTO */
+
 .informacion{
+  text-align: left;
+  background-color: red;
+}
+.info{
   display: flex;
   flex-direction: row-reverse;
   /* align-items: center; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 20px;
   max-width: 1000px;
 }
@@ -190,7 +197,7 @@ Comenzar con mobile por buenas practicas */
 .info-contactanos{
   text-align: center;
   margin: 10px 0px;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .info-contactanos p{
@@ -216,10 +223,13 @@ Comenzar con mobile por buenas practicas */
 }
 
 /* Estilos para escritorio */ 
+@media screen and (min-width: 1251px){
 
 /* Primera seccion "banner (Jen) */
 /* Estilo para el banner general */
 /* Estilo para el banner general */
+
+
 .dj-banner {
   margin: 30px 20px; /* Margen superior e inferior de 30px, márgenes laterales de 20px */
   position: relative; /* Posición relativa para contener elementos posicionados absolutamente dentro de él */
@@ -278,5 +288,9 @@ Comenzar con mobile por buenas practicas */
 
 
 /* Segunda seccion " Información(plinio) */
+
+.informacion{
+  background-color:var(--naranjaOscuro-color);
+}
 
 /* Tercera seccion "Formulario ( Jennifer) */
