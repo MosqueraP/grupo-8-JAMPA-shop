@@ -67,41 +67,9 @@ Comenzar con mobile por buenas practicas */
 .dj-banner .dj-text p {
     font-size: calc(1.0 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
 }
+/* Segunda seccion " Información(plinio) */
 
 
-/* Segunda seccion " Información(PLINIO) */
-/* SECCIÓN DE INFORMACIÓN CONTACTO */
-.informacion{
-  text-align: left;
-}
-
-.info-titulo {
-  display: block; /* Asegura que el span se comporte como un elemento de bloque */
-  text-align: center; 
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-size: 34px;
-}
-.info-contactanos{
-  text-align: center;
-  margin: 10px 20px;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.info-contactanos p{
-  margin-bottom: 5px;
-}
-
-.info-img-map{
-  text-align: center;
-}
-
-.info-img-map img{
-  width: 90%;
-  height: auto;
-  margin: 10px 10px;
-  border-radius: 20px;
-}
 
 /* Tercera seccion "Formulario ( Jennifer) */
 
@@ -174,7 +142,6 @@ Comenzar con mobile por buenas practicas */
 
 
 /* Segunda seccion " Información(plinio) */
-
 
 /* Tercera seccion "Formulario ( Jennifer) */
 
