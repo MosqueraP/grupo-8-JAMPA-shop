@@ -174,7 +174,41 @@ Comenzar con mobile por buenas practicas */
 
 
 /* Segunda seccion " Información(plinio) */
+/* SECCIÓN DE INFORMACIÓN CONTACTO */
+.informacion{
+  display: flex;
+  flex-direction: row-reverse;
+  /* align-items: center; */
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+}
 
+.info-titulo {
+  display: none; /* Elimina el titulo en esta vista */
+}
+.info-contactanos{
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.info-contactanos p{
+  margin-bottom: 5px;
+}
+
+.info-img-map{
+  display: flex;
+  text-align: center;
+
+}
+
+.info-img-map img{
+  width: 95%;
+  height: auto;
+  margin: 10px 6px;
+  border-radius: 20px;
+}
 
 /* Tercera seccion "Formulario ( Jennifer) */
 
