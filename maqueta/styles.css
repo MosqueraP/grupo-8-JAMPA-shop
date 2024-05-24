@@ -2,8 +2,8 @@
 :root{
   --azul-color:#033E8C;
   --azulClaro-color:#86CCDA;
-  --naranjaClaro-color:#F27F0C;
-  --naranjaOscuro-color:#F7AD19;
+  --naranjaOscuro-color:#F27F0C;
+  --amarilloNaranja-color:#F7AD19;
   --gris-color:#E3E3E3;
   --blanco-color:#FFFFFF;
   --negro-color:#1B1B1B;
@@ -27,7 +27,22 @@ body{
   background-color: var(--blanco-color);
 }
 
-/* Estilos para mobile con un ancho máximo de 600px */
+.encabezado{ /* Estilos para el encabezado es normal */
+  width: 100%;
+  height: 120px;
+  background-color: var(--azul-color);
+}
+.footer{ /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
+  width: 100%;
+  height: 50px;
+  color: var(--blanco-color);
+  background-color: var(--azul-color);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Estilos para mobile con un ancho máximo de 659px */
 @media screen and (max-width: 659px) {
   /* Colocar sus estilos aqui */
 
@@ -66,56 +81,53 @@ body{
 }
 
 
-
-/* Estilos para escritorio */ 
-
+/* Estilos para escritorio */
+@media screen and (min-width: 1251px){
   /* Estilos para el encabezado */
-  .encabezado{
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    background-color: var(--azul-color);
-    padding: 10px;
-  }
-  /* tamaño del logo */
-  .logo img{
-    width: 320px;
-  }
-  /* edicion contenedor navegacion completo */
-  .contenedorNav{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px;
-  }
-  /* edicion contenedor buscar e iconos */
-  .contenedorBusyIco{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* barra de navegacion*/
-  .barraNavegacion{
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    align-items: center;
-  }
-  .barraNavegacion a{
-    text-decoration: none;
-    color: var(--naranjaClaro-color);
-    font-size: 16px;
-  }
-  /* barra de busqueda */
-  .barraBusqueda{
-    display: flex;
+.encabezado{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--azul-color);
+  padding: 10px;
+}
+/* tamaño del logo */
+.logo img{
+  width: 320px;
+}
+/* edicion contenedor navegacion completo */
+.contenedorNav{
+  display: flex;
+  width: 100%;
   justify-content: space-between;
-  width: 70%;
+  gap: 20px;
+  padding: 10px;
+}
+/* edicion contenedor buscar e iconos */
+.contenedorBusyIco{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+/* barra de navegacion*/
+.barraNavegacion{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  align-items: center;
+}
+.barraNavegacion a{
+  text-decoration: none;
+  color: var(--naranjaClaro-color);
+  font-size: 16px;
+}
+/* barra de busqueda */
+.barraBusqueda{
+  display: flex;
+justify-content: space-between;
+width: 70%;
 }
 .barraBusqueda input{
   width: 100%;
@@ -151,12 +163,9 @@ body{
   font-size: 40px;
 }
 
-.footer{ /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  color: var(--blanco-color);
-  background-color: var(--azul-color);  
+.footer{ 
+
+  
+ 
+}
 }
