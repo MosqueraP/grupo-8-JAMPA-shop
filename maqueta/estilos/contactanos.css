@@ -264,11 +264,7 @@ Comenzar con mobile por buenas practicas */
   }
 
 
-
-  /* Segunda seccion "Información (Plinio)" */
-  .informacion {}
-
-  .info {
+    .info {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
