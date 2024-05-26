@@ -10,64 +10,6 @@ Comenzar con mobile por buenas practicas */
 
 /* Primera seccion "banner (Jen) */
 
-  /* Estilo para el banner general */
-  .dj-banner {
-    margin: 20px 10px; /* Margen superior e inferior de 20px, márgenes laterales de 10px */
-    position: relative;
-    width: calc(100% - 20px); /* Ancho calculado para considerar márgenes laterales */
-  }
-
-  /* Estilo para el fondo del banner */
-  .dj-bg {
-    background-image: url(bg-img-banner.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-    position: relative;
-  }
-
-  /* Estilo para la imagen dentro del banner */
-  .dj-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-
-  /* Estilo para el texto dentro del banner */
-  .dj-text {
-    text-align: center;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(12, 12, 12);
-  }
-
- /* Ajustar la posición y el alineado del texto dentro del banner */
- .dj-banner .dj-text {
-  top: 50%; /* Posicionar el texto al 50% de la altura del contenedor padre */
-  left: 10%; /* Posicionar el texto al 10% del ancho del contenedor padre */
-  transform: translateY(-50%); /* Ajustar la posición para centrar verticalmente el texto */
-  width: 40%; /* Ancho del 40% del contenedor padre */
-  text-align: left; /* Alinear el texto a la izquierda */
-}
-
-/* Ajustar el tamaño de la fuente del título dentro del texto del banner */
-.dj-banner .dj-text h1 {
-    font-size: calc(2 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-}
-
-/* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
-.dj-banner .dj-text p {
-    font-size: calc(1.0 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-}
-
-
 /* Segunda seccion " Información(PLINIO) */
 /* SECCIÓN DE INFORMACIÓN CONTACTO */
 .informacion{
@@ -115,65 +57,6 @@ Comenzar con mobile por buenas practicas */
     /* Colocar sus estilos aqui */
 
 /* Primera seccion "banner (Jen) */
-
-
- /* Estilo para el banner general */
- .dj-banner {
-  margin: 30px 0;
-  position: relative;
-  width: 100%;
-}
-
-/* Estilo para el fondo del banner */
-.dj-bg {
-  background-image: url(bg-img-banner.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-
-/* Estilo para la imagen dentro del banner */
-.dj-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Estilo para el texto dentro del banner */
-.dj-text {
-  text-align: left;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(12, 12, 12);
-}
- /* Ajustar la posición y el alineado del texto dentro del banner */
- .dj-banner .dj-text {
-  top: 50%; /* Posicionar el texto al 50% de la altura del contenedor padre */
-  left: 10%; /* Posicionar el texto al 10% del ancho del contenedor padre */
-  transform: translateY(-50%); /* Ajustar la posición para centrar verticalmente el texto */
-  width: 40%; /* Ancho del 40% del contenedor padre */
-  text-align: left; /* Alinear el texto a la izquierda */
-}
-
-/* Ajustar el tamaño de la fuente del título dentro del texto del banner */
-.dj-banner .dj-text h1 {
-    font-size: calc(2 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-}
-
-/* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
-.dj-banner .dj-text p {
-    font-size: calc(1.0 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-}
-
-
 /* Segunda seccion " Información(plinio) */
 /* SECCIÓN DE INFORMACIÓN CONTACTO */
 
@@ -232,71 +115,11 @@ Comenzar con mobile por buenas practicas */
 }
 
 /* Estilos para escritorio */ 
-@media screen and (min-width: 1251px){
-    
+@media screen and (min-width: 1251px){    
 
   /* Primera seccion "banner (Jen) */
   /* Estilo para el banner general */
   /* Estilo para el banner general */
-
-
-  .dj-banner {
-    margin: 30px 20px; /* Margen superior e inferior de 30px, márgenes laterales de 20px */
-    position: relative; /* Posición relativa para contener elementos posicionados absolutamente dentro de él */
-    width: calc(100% - 40px); /* Ancho del 100% del contenedor padre menos márgenes laterales */
-  }
-
-  /* Estilo para el fondo del banner */
-  .dj-bg {
-    background-image: url(bg-img-banner.png); /* Imagen de fondo */
-    background-repeat: no-repeat; /* No repetir la imagen de fondo */
-    background-position: center; /* Centrar la imagen de fondo */
-    background-size: cover; /* Escalar la imagen de fondo para cubrir todo el contenedor */
-    width: 100%; /* Ancho del 100% del contenedor padre */
-    height: 400px; /* Altura fija de 400px */
-    position: relative; /* Posición relativa para contener elementos posicionados absolutamente dentro de él */
-  }
-
-  /* Estilo para la imagen dentro del banner */
-  .dj-img {
-    display: block; /* Hacer que el elemento se comporte como un bloque */
-    width: 100%; /* Ancho del 100% del contenedor padre */
-    height: 100%; /* Altura del 100% del contenedor padre */
-    object-fit: cover; /* Escalar la imagen para cubrir el contenedor sin distorsionar */
-    border-radius: 10px; /* Bordes redondeados de 10px */
-  }
-
-  /* Estilo para el texto dentro del banner */
-  .dj-text {
-    text-align: center; /* Alinear el texto al centro */
-    padding: 10px; /* Relleno interno de 10px */
-    position: absolute; /* Posición absoluta para ubicar el texto en un lugar específico dentro del contenedor */
-    top: 50%; /* Posicionar el texto al 50% de la altura del contenedor padre */
-    left: 50%; /* Posicionar el texto al 50% del ancho del contenedor padre */
-    transform: translate(-50%, -50%); /* Ajustar la posición para centrar completamente el texto */
-    color: rgb(12, 12, 12); /* Color del texto en negro para asegurar su visibilidad sobre la imagen */
-  }
-
-  /* Ajustar la posición y el alineado del texto dentro del banner */
-  .dj-banner .dj-text {
-    top: 50%; /* Posicionar el texto al 50% de la altura del contenedor padre */
-    left: 10%; /* Posicionar el texto al 10% del ancho del contenedor padre */
-    transform: translateY(-50%); /* Ajustar la posición para centrar verticalmente el texto */
-    width: 40%; /* Ancho del 40% del contenedor padre */
-    text-align: left; /* Alinear el texto a la izquierda */
-  }
-
-  /* Ajustar el tamaño de la fuente del título dentro del texto del banner */
-  .dj-banner .dj-text h1 {
-      font-size: calc(2 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-  }
-
-  /* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
-  .dj-banner .dj-text p {
-      font-size: calc(1.0 * 1.5vw); /* Tamaño de fuente calculado basado en la anchura de la ventana */
-  }
-
-
   /* Segunda seccion " Información(plinio) */
 
   .informacion {
