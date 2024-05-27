@@ -1,0 +1,39 @@
+@import url(/maqueta/styles.css); /* Se importan los estilos de styles, que es la principal */
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+
+
+/* Estilos para mobile con un ancho máximo de 600px */
+@media screen and (max-width: 659px) {
+  /* Colocar sus estilos aqui */
+  
+ /* Primera seccion "Valores (Maria) */
+  
+  /* Segunda seccion " Sobre nosotros (Alexa) */
+  
+  /* Tercera seccion "Equipo ( Maria, alexa) */
+  
+  }
+  
+  /* Estilos para tablet pantallas con un ancho máximo de 1024px */
+  @media screen and (min-width:660px) and (max-width: 1250px) {
+      /* Colocar sus estilos aqui */
+  
+  /* Primera seccion "Valores (Maria) */
+  
+  /* Segunda seccion " Sobre nosotros (Alexa) */
+  
+  /* Tercera seccion "Equipo ( Maria, alexa) */
+  
+  
+  }
+  
+  /* Estilos para escritorio */ 
+  
+  /* Primera seccion "Valores (Maria) */
+  
+  /* Segunda seccion " Sobre nosotros (Alexa) */
+  
+  /* Tercera seccion "Equipo ( Maria, alexa) */
+  
