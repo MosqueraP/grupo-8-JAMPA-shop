@@ -1,7 +1,12 @@
-@import url(/grupo-8-JAMPA-shop/maqueta/styles.css); /* Se importan los estilos de styles, que es la principal */
+@import url(/maqueta/styles.css);
+/* Se importan los estilos de styles, que es la principal */
+
 
 /* IMPORTANTE
 Comenzar con mobile por buenas practicas */
+
+/* Estilos para mobile con un ancho máximo de 659px */
+/* Colocar sus estilos aqui */
 
 
 /* Estilos para mobile con un ancho máximo de 600px */
@@ -150,8 +155,131 @@ background-image: url(/grupo-8-JAMPA-shop/maqueta/imagenes-nosotros/Propuesta-Va
   background-position: center;
   opacity: 0.8;
   aspect-ratio: 1;
+
+
+/* Primera seccion "Valores (Alexa) */
+
+/* CONTENEDOR PADRE DE LA SECCIÓN BANNER */
+.mainBanner {
+  display: flex;
+  width: 100%;
+}
+
+/* CONTENEDOR DEL BANNER, EN SU INTERIOR ESTAN LA IMAGEN Y SLIDE DE VALORES DE JAMPA */
+.containerBanner {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* CONTENEDOR DE LA IMAGEN DEL BANNER */
+.containerImage {
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMAGEN BANNER */
+.containerImage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+}
+
+/* CONTENEDOR LAS TARJETAS DONDE ESTAN LOS VALORES */
+.containerCardValores {
+  background-color: var(--blanco-color);
+  border-radius: 20px;
+  height: 120px;
+  width: calc((130px * 3) + 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  translate: -50% -50%;
+  gap: 60px;
+  box-shadow: 5px 5px 10px 1px rgb(78, 78, 78);
+  overflow: hidden;
+}
+
+/* TARJETA DE VALORES */
+.cardValores {
+  border-radius: 20px;
+  width: 130px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: sliderValores  5s steps(3) infinite;
+}
+
+/* TITULOS DE LOS VALORES */
+.titleCard {
+  font-size: 16px;
+  /* margin: 10px 10px; */
+  font-weight: 600;
+}
+
+/* DESCRIPCIONES DE CADA TARJETA */
+.descriptionCard {
+  font-size: 16px;
+}
+
+/* TARJETA CENTRAL NARANJA */
+#cardOrange {
+  background-color: var(--naranjaOscuro-color);
+  border-radius: 20px;
+  width: 130px;
+  height: 145px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-shadow: 5px 10px 15px 1px rgb(78, 78, 78);
+}
+
+/* Segunda seccion " Sobre nosotros (Alexa) */
+
+/* Tercera seccion "Equipo ( Alexa) */
+
+/* CONTENEDOR PADRE DE LA SECCIÓN CARDS */
+.mainCards{
+  /* background-color: aqua; */
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR DE LAS TARJETAS DE CADA DESARROLLADOR */
+.containerCardDevs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
   }
+
+/* TARJETA DE CADA DESARROLLADOR, CONTIENE IMAGEN, NOMBRE Y DESCRIPCIÓN */
+.cardDevs{
+  width: 260px;
+  height: 350px;
+  display: flex;
+  align-items:flex-end;
+  transition: transform 0.5s ease-in;
+  animation: slider 10s linear infinite ;
   
+
   
   .imgVision{
     background-image: url(/grupo-8-JAMPA-shop/maqueta/imagenes-nosotros/vision.jpg);
@@ -231,3 +359,183 @@ background-image: url(/grupo-8-JAMPA-shop/maqueta/imagenes-nosotros/Propuesta-Va
 
 
   /* Tercera seccion "Equipo ( Maria, alexa) */
+
+}
+
+/* TARJETA DESARROLLADOR CON LA PROPIEDAD HOVER */
+.cardDevs:hover{
+  transform: scale(1.2);  
+}
+
+/* CONTENEDOR DE LA IMAGEN DEL DESARROLLADOR */
+.ImageDevs{
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  overflow: hidden;   
+  z-index:100;
+  border: 5px solid var(--azul-color);
+  margin-top: -50%;
+  box-shadow: 1px 1px 5px 1px rgb(90, 90, 90);
+}
+
+/* IMAGEN DEL DESARROLLADOR */
+.ImageDevs img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* CONTENEDOR DONDE SE ENCUENTRA NOMBRE Y DESCRIPCIÓN DEL DESARROLLADOR (COLOR NARANJA/AZUL) */
+.containerDevs{
+  background-color: var(--naranjaOscuro-color);
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  box-shadow: 1px 1px 5px 1px rgb(90, 90, 90);
+}
+
+
+/* SE AGREGA LA PROPIEDAD nth-child--> EL CONTENEDOR DE LA DESCRIPCIÓN DEL DESARROLLADOR SE REALIZO NARANJA, ESTA PROPIEDAD  PERMITIO CAMBIAR LOS COLORES DE LOS CONTENEDORES QUE SON HERMANOS DIRECTOSfl, ICONOS Y BORDER SIN TENER QUE CREAR NUEVAS CLASES, INDICANDO QUE TODOS LOS HIJOS QUE SE ENCUENTRAN E CARD DEVS DEBEN REALIZAR ESE CAMBIO*/
+
+.cardDevs:nth-child(even) .containerDevs{
+  background-color: var(--azul-color);
+}
+
+.cardDevs:nth-child(2n+2) .ImageDevs{
+  border-color: var(--naranjaOscuro-color);
+}
+
+.cardDevs:nth-child(2n+2) .bi-linkedin, .cardDevs:nth-child(2n+2) .bi-github{
+  color: var(--naranjaOscuro-color);
+}
+
+
+/* NOMBRE DEL DESARROLLADOR */
+.NameDevs{
+  color: var(--blanco-color);
+  /* position: absolute; */
+  top: 40%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* DESCRIPCIÓN DEL DESARROLLADOR */
+.DescriptionDevs{
+  color: var(--blanco-color);
+  /* position: absolute; */
+  top: 52%;
+  font-size: 16px;
+  left: 0;
+  text-align: center;
+}
+
+/* CONTENEDOR DE LA SECCIÓN ICONOS */
+.containerIcons{
+  /* background-color: rebeccapurple; */
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ICONOS EMPLEADOS*/
+.iconLinkedin, .iconGithub{
+  width: 30px;
+  border-radius: 100px;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+/* ICONOS EMPLEADOS TIPOGRAFÍA */
+.bi-linkedin, .bi-github {
+  font-size: 30px;
+  color: var(--azul-color);
+}
+
+
+/* Estilos para tablet pantallas con un ancho máximo de 1024px */
+@media (min-width: 659px) {
+
+  /* Colocar sus estilos aqui */
+  /* Primera seccion "Valores (Alexa) */
+  /* CONTENEDOR DEL BANNER */
+  .containerBanner {
+    height: 400px;
+    overflow: none;
+  }
+
+  /* CONTENEDOR DE LA IMAGEN DEL BANNER*/
+  .containerImage {
+    height: 350px;
+    position: relative;
+    overflow: none;
+  }
+
+  /* IMAGEN BANNER */
+  .containerImage img {
+    object-position: top;
+  }
+
+  /* CONTENEDOR LAS TARJETAS DONDE ESTAN LOS VALORES */
+  .containerCardValores {
+    border-radius: 20px;
+    top: 77%;
+  }
+
+  /* Segunda seccion " Sobre nosotros (Maria) */
+
+  /* Tercera seccion "Equipo (Alexa) */
+
+
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1251px) {
+
+  /* Primera seccion "Valores (Alexa) */
+  .containerBanner {
+    height: 500px;
+  }
+
+  /* CONTENEDOR DE LA IMAGEN DEL BANNER */
+  .containerImage {
+    height: 400px;
+  }
+
+  /* Segunda seccion " Sobre nosotros (Maria) */
+
+  /* Tercera seccion "Equipo ( Alexa) */
+
+
+}
+
+
+/* EN ESTA SECCIÓN, VAN TODOS LOS KEYFRAMES ESTOS ELEMENTOS PUEDEN SER RECICLADOS*/
+/*  KEYFRAMES PARA CARRUSELES DE TRANSICIÓN INFINITA*/
+@keyframes slider {
+  0% {
+    translate: -300px;
+  }
+  100%{
+    translate: calc(260px * 5 );
+  }
+}
+
+@keyframes sliderValores{
+  0%{
+    translate: 0;
+  }
+  100%{
+    translate: calc(160px * 3);
+  }
+}
