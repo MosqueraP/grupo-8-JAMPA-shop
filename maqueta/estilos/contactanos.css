@@ -4,16 +4,15 @@
 Comenzar con mobile por buenas practicas */
 
 
-
-/* Estilos para mobile con un ancho máximo de 600px */
+/* Estilos para mobile con un ancho máximo de 659px */
 @media screen and (max-width: 659px) {
 /* Colocar sus estilos aqui */
 
-/* Primera seccion "banner (Jen) */
+/* Primera seccion "Valores (Maria) */
 
-/* Segunda seccion " Información(plinio) */
+/* Segunda seccion " Sobre nosotros (Alexa) */
 
-/* Tercera seccion "Formulario ( Jennifer) */
+/* Tercera seccion "Equipo ( Maria, alexa) */
 
 }
 
@@ -21,19 +20,22 @@ Comenzar con mobile por buenas practicas */
 @media screen and (min-width:660px) and (max-width: 1250px) {
     /* Colocar sus estilos aqui */
 
-/* Primera seccion "banner (Jen) */
+/* Primera seccion "Valores (Maria) */
 
-/* Segunda seccion " Información(plinio) */
+/* Segunda seccion " Sobre nosotros (Alexa) */
 
-/* Tercera seccion "Formulario ( Jennifer) */
+/* Tercera seccion "Equipo ( Maria, alexa) */
 
 
 }
 
+
+
 /* Estilos para escritorio */ 
+@media screen and (min-width: 1251px){
+/* Primera seccion "Valores (Maria) */
 
-/* Primera seccion "banner (Jen) */
+/* Segunda seccion " Sobre nosotros (Alexa) */
 
-/* Segunda seccion " Información(plinio) */
-
-/* Tercera seccion "Formulario ( Jennifer) */
+/* Tercera seccion "Equipo ( Maria, alexa) */
+}
