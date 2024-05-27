@@ -1,42 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const botonVision = document.getElementById('botonVision1');
-    const botonMision = document.getElementById('botonMision1');
-    const botonProyecto = document.getElementById('botonProyecto1');
-    const botonPropuestaValor =document.getElementById('botonPropuestaValor1');
-   
+document.addEventListener("DOMContentLoaded", function () {
+  const botonVision = document.getElementById('botonVision1');
+  const botonMision = document.getElementById('botonMision1');
+  const botonProyecto = document.getElementById('botonProyecto1');
+  const botonPropuestaValor = document.getElementById('botonPropuestaValor1');
 
-    const imgVision = document.getElementById('imgVision1');
-    const imgMision = document.getElementById('imgMision1');
-    const imgProyecto = document.getElementById('imgProyecto1');
-    const imgPropuestaValor = document.getElementById('imgPropuestaValor1');
 
-    botonVision.addEventListener('click', function() {
-        ocultarInfor();
-        imgVision.classList.add('mostrar');
-    });
+  const imgVision = document.getElementById('imgVision1');
+  const imgMision = document.getElementById('imgMision1');
+  const imgProyecto = document.getElementById('imgProyecto1');
+  const imgPropuestaValor = document.getElementById('imgPropuestaValor1');
 
-    botonMision.addEventListener('click', function() {
-        ocultarInfor();
-        imgMision.classList.add('mostrar');
-    });
+  botonVision.addEventListener('click', function () {
+    ocultarInfor();
+    imgVision.classList.add('mostrar');
+  });
 
-    botonProyecto.addEventListener('click', function() {
-        ocultarInfor();
-        imgProyecto.classList.add('mostrar');
-    });
+  botonMision.addEventListener('click', function () {
+    ocultarInfor();
+    imgMision.classList.add('mostrar');
+  });
 
-    botonPropuestaValor.addEventListener('click', function() {
-        ocultarInfor();
-        imgPropuestaValor.classList.add('mostrar');
-    });
-    // ocultar todos los contenidos
-    function ocultarInfor() {
-        imgVision.classList.remove('mostrar');
-        imgMision.classList.remove('mostrar');
-        imgProyecto.classList.remove('mostrar');
-        imgPropuestaValor.classList.remove('mostrar');
-    }
+  botonProyecto.addEventListener('click', function () {
+    ocultarInfor();
+    imgProyecto.classList.add('mostrar');
+  });
+
+  botonPropuestaValor.addEventListener('click', function () {
+    ocultarInfor();
+    imgPropuestaValor.classList.add('mostrar');
+  });
+  // ocultar todos los contenidos
+  function ocultarInfor() {
+    imgVision.classList.remove('mostrar');
+    imgMision.classList.remove('mostrar');
+    imgProyecto.classList.remove('mostrar');
+    imgPropuestaValor.classList.remove('mostrar');
+  }
 });
+
 // CREACIÓN DE FUNCIÓN LOGICA PARA EL SLIDE DE LOS DESARROLLADORES
 // TRAYENDO INFORMACIÓN DEL HTML (Class), PERO ESTA ES UNA COLECCIÓN DE LISTAS
 
@@ -46,17 +47,17 @@ const cardDevs = document.getElementsByClassName("cardDevs")
 const containerCardDevs = document.getElementById("containerCardDevs")
 
 // CREACIÓN DE UN ARRAY, ESTOY CONVIRTIENDO UNA COLECCIÓN DE LISTAS (cardDevs) EN UN ARRAY POR MEDIO DEL METODO FROM
-const arrayCardDevs = Array.from (cardDevs)
+const arrayCardDevs = Array.from(cardDevs)
 
 //  REPETIR EL FOREACH 2 VECES (<2)
-for(let i = 0; i<2; i++){
+for (let i = 0; i < 2; i++) {
 
 
-// ITERAR EL ARRAY CON EL FOREACH
-arrayCardDevs.forEach(element => {
+  // ITERAR EL ARRAY CON EL FOREACH
+  arrayCardDevs.forEach(element => {
     // TOMAR CADA ELEMENTO DEL ARRAY Y SE ENVIA AL CONTAINER CARD DEVS EN FORMATO HTML (EL + ME CONCATENA CADA ELEMENTO DEL ARRAY)
-    containerCardDevs.innerHTML+= `<div class ='cardDevs'> ${element.innerHTML} </div>`
-});
+    containerCardDevs.innerHTML += `<div class ='cardDevs'> ${element.innerHTML} </div>`
+  });
 };
 
 // CREACIÓN DE FUNCIÓN LOGICA PARA EL SLIDE DE VALORES
@@ -64,18 +65,18 @@ arrayCardDevs.forEach(element => {
 const cardValores = document.getElementsByClassName("cardValores")
 
 // TRAE UN ELEMENTO POR ID DEL HTML
-const containerCardValores= document.getElementById("containerCardValores")
+const containerCardValores = document.getElementById("containerCardValores")
 
 // TRANSFORMAR UNA LISTA EN ARRAY
-const arrayCardValores = Array.from (cardValores)
+const arrayCardValores = Array.from(cardValores)
 
 //  ITERACIÓN DEL FOREACH 2 VECES
-for(let i = 0; i<2; i++){
+for (let i = 0; i < 2; i++) {
 
-// ITERACIÓN SOBRE UN ARRAY
-    arrayCardValores.forEach(element =>{
-        // ENVIAR AL HTML UN ELEMENTO DEL ARRAY
-    containerCardValores.innerHTML+= `<div class ='cardValores'> ${element.innerHTML} </div>`
-})
+  // ITERACIÓN SOBRE UN ARRAY
+  arrayCardValores.forEach(element => {
+    // ENVIAR AL HTML UN ELEMENTO DEL ARRAY
+    containerCardValores.innerHTML += `<div class ='cardValores'> ${element.innerHTML} </div>`
+  })
 }
 

@@ -25,6 +25,9 @@ body{
   margin: 0 auto;
   font-family:"Montserrat", sans-serif;
   background-color: var(--blanco-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .encabezado{ /* Estilos para el encabezado es normal */
