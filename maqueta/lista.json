@@ -1,0 +1,12 @@
+{
+    "products":[
+    {
+        "name": "Sudadera Dama",
+        "sizes": ["XL", "XXL", "XXL"],
+        "colors": ["negro", "blanco", "gris"],
+        "price": 1000,
+        "stock": [{"XL":10},{"XXL":15},{"XXXL":15}]
+    }
+    ]
+    
+}

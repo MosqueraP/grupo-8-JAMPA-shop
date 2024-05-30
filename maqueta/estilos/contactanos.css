@@ -2,7 +2,16 @@
 
 /* IMPORTANTE
 Comenzar con mobile por buenas practicas */
-
+.encabezado {
+    /* Estilos para el encabezado es normal */
+    width: 100% !important;
+    height: 120px !important;
+}
+.footer {
+    /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
+    width: 100% !important;
+    height: 50px !important;
+}
 
 /* Estilos para mobile con un ancho máximo de 659px */
 @media screen and (max-width: 659px) {

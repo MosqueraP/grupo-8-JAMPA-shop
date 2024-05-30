@@ -11,39 +11,9 @@
 </head>
 
 <body>
-  <div class="contenedorPrincipal">
-    <!--Encabezado Andres -->
-    <header class="encabezado">
-      <div class="contenido">
-        <div class="logo">
-          <a href=""><img src="imagenes/logos/logo naranja.png" alt=""></a>
-        </div>
-        <nav class="nav" id="ham">
-          <ul class="barraNavegacion">
-            <li class="itemBarra1"><a href="">INICIO</a></li>
-            <li class="itemBarra2"><a href="">PRODUCTOS</a></li>
-            <li class="itemBarra3"><a href="">NOSOTROS</a></li>
-            <li class="itemBarra4"><a href="">CONTACTANOS</a></li>
-            <li class="itemCerrarSesion" id="cerrar"><a href="#iniciar">CERRAR SESION</a></li>
-            <li class="itemIniSesion" id="iniciar"><a href="#cerra">INICIAR SESION</a></li>
-          </ul>
-
-          <!-- llamo a la lista por su id en el menu hamburguesa -->
-          <!-- <a class="icoMenu" href="#ham" ><i class="bi bi-list"></i></a> -->
-          <a class="icoMenu" href="#ham"><i class="bi bi-list"></i></a>
-          <a class="icoCerrar" href="#"><i class="bi bi-x-lg"></i></a>
-        </nav>
-        <div class="barraBusqueda">
-          <button>
-            <i class="bi bi-search"></i>
-          </button>
-          <input type="text" placeholder="Busca tu producto">
-        </div>
-        <a class="icoUser" href=""><i class="bi bi-person"></i></a>
-        <a class="icoCarrito" href=""><i class="bi bi-cart3"></i></a>
-
-      </div>
-    </header>
+  <div class="contenedorPrincipal"><!--Encabezado Andres -->
+    <header class="encabezado" id="encabezadohead">
+  </header>
     <!-- Finaliza Andres -->
 
     <!--Body -->
@@ -66,13 +36,44 @@
 
 
     <!-- Footer -->
-    <footer class="footer">
-      <h2>footer</h2>
-    </footer>
+    <iframe class="footer" src="/maqueta/footer.html" frameborder="0"></iframe>
   </div>
 
   <!-- Se vincula el archivo js -->
   <script src="/app.js"></script>
+  <script src="/maqueta/nav.js"></script>
 </body>
 
 </html>
+
+<!-- <header class="encabezado">
+  <div class="contenido">
+    <div class="logo">
+      <a href="/maqueta/index.html"><img src="imagenes/logos/logo naranja.png" alt=""></a>
+    </div>
+    <nav class="nav" id="ham">
+      <ul class="barraNavegacion">
+        <li class="itemBarra1"><a href="/maqueta/index.html">INICIO</a></li>
+        <li class="itemBarra2"><a href="#">PRODUCTOS</a></li>
+        <li class="itemBarra3"><a href="/maqueta/paginas/nosotros.html">NOSOTROS</a></li>
+        <li class="itemBarra4"><a href="/maqueta/paginas/contactanos.html">CONTACTANOS</a></li>
+        <li class="itemCerrarSesion" id="cerrar"><a href="#iniciar">CERRAR SESION</a></li>
+        <li class="itemIniSesion" id="iniciar"><a href="#cerra">INICIAR SESION</a></li>
+      </ul>
+
+      <!-- llamo a la lista por su id en el menu hamburguesa -->
+      <!-- <a class="icoMenu" href="#ham" ><i class="bi bi-list"></i></a> 
+      <a class="icoMenu" href="#ham"><i class="bi bi-list"></i></a>
+      <a class="icoCerrar" href="#"><i class="bi bi-x-lg"></i></a>
+    </nav>
+    <div class="barraBusqueda">
+      <button>
+        <i class="bi bi-search"></i>
+      </button>
+      <input type="text" placeholder="Busca tu producto">
+    </div>
+    <a class="icoUser" href=""><i class="bi bi-person"></i></a>
+    <a class="icoCarrito" href=""><i class="bi bi-cart3"></i></a>
+
+  </div>
+</header> -->
