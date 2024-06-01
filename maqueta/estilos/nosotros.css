@@ -1,14 +1,14 @@
-@import url(/maqueta/styles.css); /* Se importan los estilos de styles, que es la principal */
+@import url(/maqueta/estilos/styles.css); /* Se importan los estilos de styles, que es la principal */
 
 .encabezado {
     /* Estilos para el encabezado es normal */
-    width: 100% !important;
-    height: 120px !important;
+    width: 100%;
+    height: 120px;
 }
 .footer {
     /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
-    width: 100% !important;
-    height: 50px !important;
+    width: 100%;
+    height: 50px;
 }
 /* IMPORTANTE
 Comenzar con mobile por buenas practicas */
