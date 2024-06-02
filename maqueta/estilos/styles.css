@@ -19,7 +19,6 @@
 body {
   background-color: var(--gris-color);
 }
-
 /* Contenedor principal , Por buenas practicas se hace un contenedor donde este todo el body*/
 .contenedorPrincipal {
   width: 100vw;
@@ -38,51 +37,44 @@ body {
   width: 100%;
   height: 120px;
   background-color: var(--azul-color);
+  position: fixed;
+  z-index: 1;
 }
 
 .footer {
   /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
-  width: 100% !important;
-  height: 50px !important;
+  width: 100%;
+  height: 50px;
   color: var(--blanco-color);
   background-color: var(--azul-color);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.contenidoTotal{
+  margin-top: 120px;
+}
 /* Estilos para mobile*/
 .contenido {
   display: grid;
+  position: relative;
   grid-template-areas: "bus bus bus"
                         "ham log car";
   gap: 5px;
   width: 100%;
   height: 120px;
   padding: 10px;
-}
-
-.logo {
-  display: grid;
-  grid-area: log;
-  place-content: center;
   z-index: 1;
 }
-
-.logo img {
-  width: 220px
-}
-
+/* Estilos para la barra de busqueda */
 .barraBusqueda {
-  display: grid;
   grid-area: bus;
-  display: flex;
   width: 100%;
   height: auto;
+  display: flex;
   justify-content: center;
   flex-direction: row-reverse;
 }
-
 .barraBusqueda input {
   border: 0;
   width: 70%;
@@ -94,13 +86,11 @@ body {
   color: var(--azul-color);
   font-family: "Montserrat", sans-serif;
 }
-
 .barraBusqueda input::placeholder {
   color: var(--azul-color);
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
 }
-
 .barraBusqueda button {
   border: 0;
   width: 10%;
@@ -109,21 +99,15 @@ body {
   font-size: 20px;
   color: var(--naranjaOscuro-color);
 }
-
-.nav {
+/* Estilos iconos y logo */
+.icoCerrar,.icoMenu {
   display: grid;
+  font-size: 40px;
+  grid-area: ham;
+  color: var(--naranjaOscuro-color);
   place-content: center;
-  --state-cerrar: scale(0);
-  --state-abrir: scale(1);
-  --state-menu: translate(-100%);
+  transition: .4s;/* le da animacion al boton */
 }
-
-.nav:target {
-  --state-menu: translate(0);
-  --state-cerrar: scale(1);
-  --state-abrir: scale(0);
-}
-
 .icoMenu {
   cursor: pointer;
   transform: var(--state-abrir);
@@ -132,25 +116,49 @@ body {
 .icoCerrar {
   cursor: pointer;
   transform: var(--state-cerrar);
+  z-index: 1;
+  position: fixed;
 }
-
-.barraNavegacion {
-  background-color: var(--gris-color);
-  position: absolute;/* para que salga de la grid */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.logo {
+  display: grid;
+  position: fixed;
+  grid-area: log;
+  place-content: center;
+  z-index: 2;
+}
+.logo img {
+  width: 220px
+}
+/* Comportamiento para el menu hamburguesa */
+.nav {
   display: grid;
   place-content: center;
-  align-content: start;
-  padding-top: 140px;
-  text-align: center;
-  transform: var(--state-menu);
-  transition: .8s;
-  /* le da animacion al menu */
+  position: relative;
+  --state-cerrar: scale(0);
+  --state-abrir: scale(1);
+  --state-menu: translate(-100%);
 }
-
+.nav:target { /* cuando el nav se comportara de la siguiente manera */
+  --state-menu: translate(0);
+  --state-cerrar: scale(1);/* se muestra el ico de cerrar y el ico de ham se desaparece */
+  --state-abrir: scale(0);
+}
+.barraNavegacion {
+  background-color: var(--gris-color);
+  transform: var(--state-menu);
+  display: grid;
+  position: fixed;/* para que salga de la grid */
+  place-content: center;
+  align-content:space-around;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 140px;
+  transition: .8s; /* le da animacion al menu */
+  z-index: 1;
+}
 .barraNavegacion li {
   display: flex;
   justify-content: center;
@@ -162,12 +170,12 @@ body {
   border-radius: 10px;
   /* box-shadow: 0px 0px 4px 0px var(--negro-color); */
 }
-.barraNavegacion a:hover{
-  color: var(--naranjaOscuro-color);
-}
 .barraNavegacion a {
   text-decoration: none;
   color: var(--negro-color);
+}
+.barraNavegacion a:hover{
+  color: var(--naranjaOscuro-color);
 }
 
 .icoUser {
@@ -175,14 +183,6 @@ body {
 }
 .icoUser :hover{
   color: var(--naranjaOscuro-color);
-}
-.icoCerrar,.icoMenu {
-  display: grid;
-  font-size: 40px;
-  grid-area: ham;
-  color: var(--naranjaOscuro-color);
-  place-content: center;
-  transition: .4s;/* le da animacion al boton */
 }
 
 .icoCarrito {
@@ -211,6 +211,12 @@ body {
 /* Estilos para tablet */
 @media(min-width: 659px) {
 /* Colocar sus estilos aqui */
+.contenidoTotal{
+  margin-top: unset;
+}
+.encabezado{
+  position: static;
+}
 .contenido {
   display: grid;
   grid-template-areas: "log bus bus ico car"
@@ -221,13 +227,28 @@ body {
   width: 100%;
   padding: 0px;
   margin-right: 30px;
+  position: static;
 }
 .logo {
   padding: 10px;
   height: 120px;
+  position: static;
 }
 .logo img {
   width: 200px;
+}
+.barraNavegacion {
+  background-color: unset;/* unset se para que vuelva a su estado original */
+  position: static;
+  transform: unset;
+  transition: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 10px;
+  height: 100%;
+  width: 100%;
 }
 .barraNavegacion li {
   width:auto;
@@ -251,20 +272,10 @@ body {
   place-content: unset;
   gap: 0px;
   padding: 0px;
+  z-index: 1;
 }
 .nav:target {
   --state-cerrar: scale(0);
-}
-.barraNavegacion {
-  background-color: unset;/* unset se para que vuelva a su estado original */
-  position: static;
-  transform: unset;
-  transition: unset;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 0 10px;
 }
 .icoMenu, .icoCerrar{
   display: none;

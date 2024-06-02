@@ -4,6 +4,8 @@
 Comenzar con mobile por buenas practicas */
 /* Estilos para mobile */
 
+/* recordar que la clase contenido total tiene un margintop  */
+
 /* Estilos para tablet */
 @media(min-width: 659px){
 }
