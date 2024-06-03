@@ -1,6 +1,5 @@
-{
-    "products": {
-      "men": [
+const productos ={
+    "men": [
         {
           "product_id": 1,
           "img": "https://i.postimg.cc/442rvF10/Ref-2-Buso-Capota-Beige.png",
@@ -242,5 +241,78 @@
           }
         }
       ]
+}
+
+const men = productos.men
+const women = productos.women
+const children = productos.children
+
+const nuevoProducto = {
+    product_id:9,
+    img: "https://yt3.googleusercontent.com/n3EEAZsFafFYRnAMWRUHxaHqypslvbyvp9Qt7RaY_W18PfDUR7qFwfM5T1zoOf4snyiYys3UrJs=s900-c-k-c0x00ffffff-no-rj",
+    name: "foto",
+    description: "pokemon",
+    sizes:{
+        XL: {
+            colors: {
+              black: 10,
+              blue: 8,
+              red: 5
+            }
+          },
+          XXL: {
+            colors: {
+              black: 7,
+              blue: 6,
+              red: 4
+            }
+          },
+          XXXL: {
+            colors: {
+              black: 5,
+              blue: 4,
+              red: 3
+            }
+          }   
+    },
+    tallas:["XL","XXL","XXXL"]
+}
+const productCard = document.getElementById("productCard")
+
+
+
+men.push(nuevoProducto)
+women.push(nuevoProducto)
+children.push(nuevoProducto)
+
+men.forEach(product => {
+    console.log(product);
+    productCard.innerHTML+= `
+    <div class="principal">
+    <h1>${product.name}</h1>
+    <div class="contenedorImagen">
+    <img class="imgmio" src="${product.img}">
+    </div>
+    </div>
+    `   
+}); 
+women.forEach(product => {
+    console.log(product);
+}); 
+children.forEach(product => {
+    console.log(product);
+}); 
+
+/* form.addEventListener("click", (event)=>{
+    event.preventDefault();
+    console.log(nombre.value);
+    const persona = {
+        name:nombre.value,
+        imagen: img.value
     }
-  }
+    men.push(persona)
+})
+const form = document.getElementById("form")
+const nombre = document.getElementById("nombre")
+const img = document.getElementById("img")
+*/

@@ -34,6 +34,8 @@ body {
     justify-content: space-between;
 }
 
+/* Estilos mobile */
+
 .footer {
     /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
     width: 100% !important;
@@ -43,4 +45,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Estilos para tablet*/
+@media screen and (min-width: 659px){
+}
+/* Estilos para escritorio */
+@media(min-width: 1250px){
 }

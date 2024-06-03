@@ -9,10 +9,10 @@ encabezadohead.innerHTML = `
 </div>
 <nav class='nav' id='ham'>
 <ul class='barraNavegacion'>
-    <li class='itemBarra1'><a href='#'>INICIO</a></li>
-    <li class='itemBarra2'><a href='#'>VENTAS</a></li>
-    <li class='itemBarra3'><a href='#'>INVENTARIO</a></li>
-    <li class='itemBarra4'><a href='#'>USUARIOS REGISTRADOS</a></li>
+    <li class='itemBarra1'><a href='/maqueta/paginas/admin/homeAdmin.html'>INICIO</a></li>
+    <li class='itemBarra2'><a href='/maqueta/paginas/admin/ventas.html'>VENTAS</a></li>
+    <li class='itemBarra3'><a href='/maqueta/paginas/admin/inventario.html'>INVENTARIO</a></li>
+    <li class='itemBarra4'><a href='/maqueta/paginas/admin/registroUsu.html'>USUARIOS REGISTRADOS</a></li>
     <li class='itemCerrarSesion' id='cerrar'><a href='#iniciar'>CERRAR SESION</a></li>
     <li class='itemIniSesion' id='iniciar'><a href='#cerra'>INICIAR SESION</a></li>
 </ul>

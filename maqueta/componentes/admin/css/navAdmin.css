@@ -194,7 +194,7 @@
     order: -1;
   }
   
-  /* Estilos para tablet pantallas con un ancho máximo de 1024px */
+  /* Estilos para tablet*/
   @media screen and (min-width: 659px) {
   /* Colouser sus estilos aqui */
   .contenido {
