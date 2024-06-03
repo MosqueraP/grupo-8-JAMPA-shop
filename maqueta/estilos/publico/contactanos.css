@@ -102,15 +102,18 @@ Comenzar con mobile por buenas practicas */
 }
 
 .info-img-map {
-  text-align: center;
+  /* text-align: center; */
+  width:100vw;
+  background-color: #033E8C;
 }
 
-.info-img-map img {
+
+/* .info-img-map img {
   width: 90%;
   height: auto;
   margin: 10px 10px;
   border-radius: 20px;
-}
+} */
 
 /* Tercera seccion "Formulario (Jennifer)" */
 
@@ -297,9 +300,6 @@ Comenzar con mobile por buenas practicas */
 
   /* Tercera seccion "Formulario (Jennifer)" */
 
-  /* Contenedor exterior del formulario */
-
-
   /* Contenedor interior del formulario */
   .form_container {
     padding: 15px;
@@ -316,7 +316,7 @@ Comenzar con mobile por buenas practicas */
     /* Tamaño de fuente aumentado */
     padding: .6em .8em;
     /* Reducir el espacio interior para los campos de entrada */
-    border-radius: 8px;
+    border-radius: 10px;
     /* Bordes redondeados */
   }
 
@@ -350,15 +350,14 @@ Comenzar con mobile por buenas practicas */
     /* Bordes redondeados */
     font-weight: 400;
     /* Peso de la fuente */
-
   }
+
 
 
 }
 
 /* Estilos para escritorio */
 @media(min-width: 1250px) {
-
   /* Primera seccion "banner (Jen) */
   .dj-banner {
     margin: 10px 0;
@@ -449,25 +448,20 @@ Comenzar con mobile por buenas practicas */
   /* Segunda seccion "Información (Plinio)" */
 
   .informacion {
+    /* width: 100vw; */
     text-align: left;
-    /* background-color: red; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 0 auto; */
+    /* padding: 20px; */
     max-width: 1400px;
   }
 
-  .info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1000px;
+  .contenedorInfoContactenos{
+    width: 500px;
+    margin:30px;
   }
 
   .info-titulo {
@@ -516,16 +510,6 @@ Comenzar con mobile por buenas practicas */
     /* Asegura que los bordes redondeados se apliquen correctamente */
     box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);
     /* Sombra para un efecto de elevación */
-  }
-
-  /* Contenedor interior del formulario */
-  .form_container {
-    padding: 20px;
-    /* Espacio interior para el contenido */
-    display: grid;
-    /* Uso de grid layout */
-    gap: 1em;
-    /* Espacio entre los elementos del grid */
   }
 
   /* Fila del formulario */
