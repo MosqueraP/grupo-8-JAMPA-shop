@@ -60,7 +60,6 @@ Estilos para mobile con un ancho máximo de 659px */
 
 /* TARJETA DE VALORES */
 .cardValores {
-  border-radius: 20px;
   width: 130px;
   height: 100%;
   display: flex;
@@ -82,6 +81,7 @@ Estilos para mobile con un ancho máximo de 659px */
 /* DESCRIPCIONES DE CADA TARJETA */
 .descriptionCard {
   font-size: 16px;
+  width: 130px;
 }
 
 /* TARJETA CENTRAL NARANJA */
@@ -247,6 +247,7 @@ Estilos para mobile con un ancho máximo de 659px */
   align-items: center;
   justify-content: center;
   gap: 60px;
+  animation: slider 10s linear infinite;
 }
 
 /* TARJETA DE CADA DESARROLLADOR, CONTIENE IMAGEN, NOMBRE Y DESCRIPCIÓN */
@@ -256,7 +257,6 @@ Estilos para mobile con un ancho máximo de 659px */
   display: flex;
   align-items: flex-end;
   transition: transform 0.5s ease-in;
-  animation: slider 10s linear infinite;
 
 }
 
@@ -468,6 +468,6 @@ Estilos para mobile con un ancho máximo de 659px */
   }
 
   100% {
-    translate: calc(160px * 3);
+    translate: calc(190px * 3);
   }
 }
