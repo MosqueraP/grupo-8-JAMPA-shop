@@ -107,6 +107,7 @@ body {
   color: var(--naranjaOscuro-color);
   place-content: center;
   transition: .4s;/* le da animacion al boton */
+  grid-column: 10px;
 }
 .icoMenu {
   cursor: pointer;
@@ -123,11 +124,14 @@ body {
   display: grid;
   position: fixed;
   grid-area: log;
+  z-index: 1;
   place-content: center;
-  z-index: 2;
+  padding-top: 10px;
+  width: 50%;
+  height: 60px;
 }
 .logo img {
-  width: 220px
+  width: 200px
 }
 /* Comportamiento para el menu hamburguesa */
 .nav {
@@ -157,7 +161,6 @@ body {
   height: 100vh;
   padding-top: 140px;
   transition: .8s; /* le da animacion al menu */
-  z-index: 1;
 }
 .barraNavegacion li {
   display: flex;
@@ -191,6 +194,7 @@ body {
   font-size: 40px;
   color: var(--naranjaOscuro-color);
   place-content: center;
+  
 }
 .icoCarrito :hover{
   color: var(--naranjaOscuro-color);
