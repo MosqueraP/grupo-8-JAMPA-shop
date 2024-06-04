@@ -215,7 +215,7 @@ Estilos para mobile con un ancho máximo de 659px */
   padding: 30px;
   text-align: center;
   font-size: 12px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   width: 100%;
   height: 390px;
 }
@@ -230,7 +230,7 @@ Estilos para mobile con un ancho máximo de 659px */
 }
 
 
-/* Tercera seccion "Equipo ( Maria, alexa) */
+/* Tercera seccion "Equipo (Alexa) */
 
 /* CONTENEDOR PADRE DE LA SECCIÓN CARDS */
 .mainCards {
