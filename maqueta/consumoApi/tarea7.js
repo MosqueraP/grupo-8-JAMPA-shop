@@ -7,6 +7,7 @@ const productosJAMPA = {
       "descripcion": "Camiseta de entrenamiento ligera y transpirable.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Azul", "Rojo", "Verde", "Gris"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 10, "XL": 15, "XXL": 5, "XXXL": 8 },
         "Azul": { "L": 7, "XL": 12, "XXL": 6, "XXXL": 9 },
@@ -22,6 +23,7 @@ const productosJAMPA = {
       "descripcion": "Pantalones cómodos para actividades deportivas.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Gris", "Azul", "Verde", "Rojo"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 9, "XL": 13, "XXL": 10, "XXXL": 6 },
         "Gris": { "L": 12, "XL": 10, "XXL": 7, "XXXL": 8 },
@@ -37,6 +39,7 @@ const productosJAMPA = {
       "descripcion": "Chaqueta resistente al viento y agua.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Azul", "Gris", "Verde", "Rojo"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 10, "XL": 8, "XXL": 7, "XXXL": 5 },
         "Azul": { "L": 6, "XL": 7, "XXL": 9, "XXXL": 8 },
@@ -52,6 +55,7 @@ const productosJAMPA = {
       "descripcion": "Shorts ligeros y cómodos para el deporte.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Gris", "Azul", "Verde", "Rojo"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 12, "XL": 15, "XXL": 6, "XXXL": 8 },
         "Gris": { "L": 9, "XL": 11, "XXL": 7, "XXXL": 5 },
@@ -67,6 +71,7 @@ const productosJAMPA = {
       "descripcion": "Sudadera cálida y confortable.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Azul", "Gris", "Verde", "Rojo"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 14, "XL": 10, "XXL": 12, "XXXL": 9 },
         "Azul": { "L": 11, "XL": 9, "XXL": 8, "XXXL": 6 },
@@ -84,6 +89,7 @@ const productosJAMPA = {
       "descripcion": "Camiseta ajustada para mayor comodidad.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Rosa", "Negro", "Blanco", "Azul", "Verde"],
+      "precio": 100,
       "cantidadEnStock": {
         "Rosa": { "L": 8, "XL": 12, "XXL": 5, "XXXL": 7 },
         "Negro": { "L": 10, "XL": 14, "XXL": 6, "XXXL": 8 },
@@ -99,6 +105,7 @@ const productosJAMPA = {
       "descripcion": "Leggings elásticos para máxima movilidad.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Gris", "Rosa", "Azul", "Morado"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 9, "XL": 15, "XXL": 10, "XXXL": 7 },
         "Gris": { "L": 11, "XL": 13, "XXL": 8, "XXXL": 6 },
@@ -114,6 +121,7 @@ const productosJAMPA = {
       "descripcion": "Chaqueta ligera para el entrenamiento.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Azul", "Rosa", "Blanco", "Verde"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 12, "XL": 10, "XXL": 7, "XXXL": 8 },
         "Azul": { "L": 10, "XL": 7, "XXL": 12, "XXXL": 5 },
@@ -129,6 +137,7 @@ const productosJAMPA = {
       "descripcion": "Shorts cómodos y transpirables.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Gris", "Rosa", "Azul", "Blanco"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 15, "XL": 12, "XXL": 10, "XXXL": 8 },
         "Gris": { "L": 9, "XL": 8, "XXL": 7, "XXXL": 11 },
@@ -144,6 +153,7 @@ const productosJAMPA = {
       "descripcion": "Sudadera suave y cálida para el ejercicio.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Rosa", "Negro", "Gris", "Azul", "Verde"],
+      "precio": 100,
       "cantidadEnStock": {
         "Rosa": { "L": 11, "XL": 9, "XXL": 10, "XXXL": 7 },
         "Negro": { "L": 13, "XL": 11, "XXL": 8, "XXXL": 6 },
@@ -161,6 +171,7 @@ const productosJAMPA = {
       "descripcion": "Camiseta ligera y cómoda para niños.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Rojo", "Azul", "Verde", "Amarillo", "Blanco"],
+      "precio": 100,
       "cantidadEnStock": {
         "Rojo": { "L": 10, "XL": 8, "XXL": 7, "XXXL": 5 },
         "Azul": { "L": 7, "XL": 6, "XXL": 9, "XXXL": 8 },
@@ -176,6 +187,7 @@ const productosJAMPA = {
       "descripcion": "Pantalones cómodos para niños activos.",
       "tallas": ["L", "XL", "XXL", "XXXL"],
       "colores": ["Negro", "Gris", "Azul", "Verde", "Rojo"],
+      "precio": 100,
       "cantidadEnStock": {
         "Negro": { "L": 12, "XL": 10, "XXL": 7, "XXXL": 5 },
         "Gris": { "L": 9, "XL": 6, "XXL": 8, "XXXL": 7 },
@@ -199,6 +211,7 @@ const nuevoProducto =     {
   "descripcion": "Pantalones cómodos para niñas.",
   "tallas": ["L", "XL", "XXL", "XXXL"],
   "colores": ["Negro", "Gris", "Azul", "Rosado", "Rojo"],
+  "precio": 100,
   "cantidadEnStock": {
     "Negro": { "L": 12, "XL": 10, "XXL": 7, "XXXL": 5 },
     "Gris": { "L": 9, "XL": 6, "XXL": 8, "XXXL": 7 },
