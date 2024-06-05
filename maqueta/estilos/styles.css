@@ -319,6 +319,19 @@ body {
 .barraBusqueda button {
   height: 40px;
 }
+.logo {
+  display: grid;
+  position: static;
+  grid-area: log;
+  place-content: center;
+  padding-top: 10px;
+  width: 100%;
+  height: unset;
+}
+.logo img {
+  width: 250px
+}
+
 }
 
 /* Estilos para escritorio */
