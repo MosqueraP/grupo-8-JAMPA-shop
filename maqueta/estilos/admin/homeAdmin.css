@@ -10,10 +10,10 @@ main.cards {
     flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
     padding: 32px; /* Padding alrededor del contenedor */
-  }
-  
-  /* Estilo de cada tarjeta */
-  main.cards section.card {
+}
+
+/* Estilo de cada tarjeta */
+main.cards section.card {
     display: flex; /* Utiliza flexbox dentro de cada tarjeta */
     flex-direction: column; /* Coloca los elementos en una columna */
     align-items: center; /* Centra los elementos horizontalmente */
@@ -25,35 +25,35 @@ main.cards {
     max-width: 300px; /* Ancho máximo de cada tarjeta */
     margin: 16px; /* Margen alrededor de cada tarjeta */
     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-  }
-  
-  /* Estilo de los iconos dentro de las tarjetas */
-  main.cards section.card .icon {
+}
+
+/* Estilo de los iconos dentro de las tarjetas */
+main.cards section.card .icon {
     width: 64px; /* Ancho del icono */
     height: 64px; /* Altura del icono */
-  }
-  
-  /* Estilo de las imágenes dentro de las tarjetas */
-  main.cards section.card img {
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+main.cards section.card img {
     width: 100%; /* Ancho de las imágenes */
-  }
-  
-  /* Estilo de los encabezados dentro de las tarjetas */
-  main.cards section.card h3 {
+}
+
+/* Estilo de los encabezados dentro de las tarjetas */
+main.cards section.card h3 {
     font-size: 100%; /* Tamaño de la fuente del encabezado */
     margin: 16px 0; /* Margen superior e inferior */
-  }
-  
-  /* Estilo del texto adicional dentro de las tarjetas */
-  main.cards section.card span {
+}
+
+/* Estilo del texto adicional dentro de las tarjetas */
+main.cards section.card span {
     font-weight: 300; /* Peso de la fuente */
     max-width: 240px; /* Ancho máximo del texto */
     font-size: 80%; /* Tamaño de la fuente */
     margin-bottom: 16px; /* Margen inferior */
-  }
-  
-  /* Estilo de los botones dentro de las tarjetas */
-  main.cards section.card button {
+}
+
+/* Estilo de los botones dentro de las tarjetas */
+main.cards section.card button {
     padding: 0.5rem 1rem; /* Padding dentro del botón */
     text-transform: uppercase; /* Transforma el texto a mayúsculas */
     border-radius: 32px; /* Bordes redondeados del botón */
@@ -62,22 +62,21 @@ main.cards {
     font-size: 80%; /* Tamaño de la fuente del botón */
     font-weight: 500; /* Peso de la fuente del botón */
     color: #E3E3E3; /* Color del texto del botón */
-  }
-  
-  /* Estilo específico de los botones en diferentes tarjetas */
-  main.cards section.card.contato button,
-  main.cards section.card.compre button,
-  main.cards section.card.sobre button {
-    background: linear-gradient(to right, #033E8C, #86CCDA); /* Gradiente de fondo */
-  }
-  
-  /* Sombra para diferentes tipos de tarjetas */
-  main.cards section.card.contato,
-  main.cards section.card.compre,
-  main.cards section.card.sobre {
-    box-shadow: 20px 20px 50px -30px #8d5adf; /* Sombra alrededor de las tarjetas */
-  }
-  
+}
+
+/* Estilo específico de los botones en diferentes tarjetas */
+main.cards section.card.contato button,
+main.cards section.card.compre button,
+main.cards section.card.sobre button {
+    background: linear-gradient(to right, #F27F0C, #F7AD19); /* Gradiente de fondo */
+}
+
+/* Sombra para diferentes tipos de tarjetas */
+main.cards section.card.contato,
+main.cards section.card.compre,
+main.cards section.card.sobre {
+    box-shadow: 20px 20px 50px -30px #1B1B1B; /* Sombra alrededor de las tarjetas */
+}
 
 
 
@@ -131,38 +130,10 @@ main.cards {
     font-weight: 300; /* Peso de la fuente */
     max-width: 280px; /* Ancho máximo del texto */
     font-size: 90%; /* Tamaño de la fuente */
-    margin-bottom: 16px; /* Margen inferior */
+   }
   }
-  
-  /* Estilo de los botones dentro de las tarjetas */
-  main.cards section.card button {
-    padding: 0.75rem 1.5rem; /* Padding dentro del botón */
-    text-transform: uppercase; /* Transforma el texto a mayúsculas */
-    border-radius: 32px; /* Bordes redondeados del botón */
-    border: 0; /* Sin borde */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-size: 90%; /* Tamaño de la fuente del botón */
-    font-weight: 500; /* Peso de la fuente del botón */
-    color: #E3E3E3; /* Color del texto del botón */
-  }
-  
-  /* Estilo específico de los botones en diferentes tarjetas */
-  main.cards section.card.contato button,
-  main.cards section.card.compre button,
-  main.cards section.card.sobre button {
-    background: linear-gradient(to right, #033E8C, #86CCDA); /* Gradiente de fondo */
-  }
-  
-  /* Sombra para diferentes tipos de tarjetas */
-  main.cards section.card.contato,
-  main.cards section.card.compre,
-  main.cards section.card.sobre {
-    box-shadow: 20px 20px 50px -30px #8d5adf; /* Sombra alrededor de las tarjetas */
-  }
-}
 
-
-/* Estilos para escritorio */
+  /* Estilos para escritorio */
 @media (min-width: 1250px) {
 
   /* Contenedor principal de las tarjetas */
@@ -230,13 +201,13 @@ main.cards {
   main.cards section.card.contato button,
   main.cards section.card.compre button,
   main.cards section.card.sobre button {
-    background: linear-gradient(to right, #033E8C, #86CCDA); /* Gradiente de fondo */
+    background: linear-gradient(to right, #F27F0C, #F7AD19); /* Gradiente de fondo */
   }
   
   /* Sombra para diferentes tipos de tarjetas */
   main.cards section.card.contato,
   main.cards section.card.compre,
   main.cards section.card.sobre {
-    box-shadow: 20px 20px 50px -30px #8d5adf; /* Sombra alrededor de las tarjetas */
+    box-shadow: 20px 20px 50px -30px #1B1B1B; /* Sombra alrededor de las tarjetas */
   }
 }
