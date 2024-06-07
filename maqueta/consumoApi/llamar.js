@@ -13,7 +13,7 @@ for (categoria in convertir){
         console.log(tipo);
         convertir[categoria][tipo].forEach(element => {
             console.log(element);
-            nombres.innerHTML+=`
+            nombres.innerHTML=`
             <h1>${element.nombre}</h1>
             <h1>${element.producto_id}</h1>
             <img src="${element.imagen}">

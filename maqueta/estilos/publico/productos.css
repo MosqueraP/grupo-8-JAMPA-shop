@@ -3,7 +3,89 @@
 /* IMPORTANTE
 Comenzar con mobile por buenas practicas */
 /* Estilos para mobile */
+.contenidoTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    gap: 10px;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.contenTarjeta{
+background-color:var(--gris-color);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 80%;
+height: 550px;
+margin: 15px;
+gap: 10px;
+border-radius: 20px;
+box-shadow: 0px 0px 10px 0px;
+}
+/* estilo para la imagen */
+.imgTar{
+    width: 90%;
+    height: 370px;
+    object-fit: cover;
+    object-position: top;
+}
+/* Estilo para el texto descripción y precio */
+.texTarj{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    gap: 10px;
+    font-size: 18px;
+}
+/* estilos para seccion de opciones, boton y ver detalle */
+.opciones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+}
+.opciones button{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    width: 50%;
+    height: 60%;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out; /* transición suave para el efecto de pulsación */
+}
+.opciones button:hover{
+    background-color: var(--naranjaOscuro-color);
+    border-color: var(--naranjaOscuro-color);
+    color: var(--blanco-color);
+}
+.opciones button:active{
+    transform: scale(0.9);
+}
+.opciones a{
+    text-decoration: none;
+    color: var(--negro-color);
+}
+.opciones a:hover{
+    color: var(--naranjaOscuro-color);
+}
 /* Estilos para tablet */
 @media(min-width: 659px){
 }
