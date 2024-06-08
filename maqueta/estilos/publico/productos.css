@@ -92,4 +92,24 @@ box-shadow: 0px 0px 10px 0px;
 
 /* Estilos para escritorio */
 @media(min-width: 1250px){
+.tarjeta{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: start;
+align-items: start;
+border: solid;
+width: 100%;
+}
+.contenTarjeta{
+display: flex;
+width: 320px;
+height: 550px;
+}
+.imgTar{
+width: 50%;
+height: 270px;
+object-fit: cover;
+object-position: top;
+}
 }
