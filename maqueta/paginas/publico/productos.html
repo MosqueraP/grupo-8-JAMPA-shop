@@ -11,20 +11,30 @@
 </head>
 
 <body>
-  <main class="contenedorPrincipal"><!--Encabezado Andres -->
-
-    <header class="encabezado" id="encabezadohead">
+  <main class="contenedorPrincipal">
+    <header class="encabezado" id="encabezadohead"><!-- Ya importado -->
     </header>
-    <div class="contenidoTotal">
-      
+    <div class="contenidoTotal"><!-- contenido de la pagina -->
+     
+      <div class="titulo">
+      <h1>PRODUCTOS</h1>
+      </div>
+      <div class="filtrar" id="filtrar">
+        barra de filtar
+      </div>
+      <div class="tarjeta" id="tarjeta"></div><!--Tarjeta de productos -->
     </div>
-    <!-- Footer -->
-    <footer class="footer">
+
+
+   <!-- Footer -->
+    <footer class="footer"> 
     </footer>
   </main>
 
   <!-- Se vincula el archivo js -->
   <script src="/maqueta/componentes/publico/nav.js"></script>
+  <script src="/maqueta/consumoApi/ejeLocalStorage.js"></script>
+  <script src="/maqueta/consumoApi/productos.js"></script>
 </body>
 
 </html>
