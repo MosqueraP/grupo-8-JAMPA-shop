@@ -197,49 +197,92 @@ th, td {
     padding: 5px 8px;
 }
 
- /* Estilos para tabla o registro de producntos */
-
- /* table {
-    width: 97%;
-    margin: 0 auto;
- }
-
-table, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    td:before {
-        content: attr(data-label);
-        flex-basis: 30%;
-        font-weight: bold;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    } */
-
-
-
-
-
 /* Estilos para tablet */
 @media(min-width: 659px){
+    .productForm {
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr); */
+        grid-template-rows: 60px 45px 45px 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: "desc desc desc precio talla color"
+                             "imagen1 imagen1 imagen1 imagen1 imagen1 imagen1 "
+                             "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2"
+                             "cantidad boton boton . . .";
+        
+        gap: 1px;
+        /* max-width: 400px; */
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+        background-color: blueviolet;
+    }
     
+    
+
+    h2 {
+        color: blueviolet;
+        text-align: center;
+    }
+
+    .nombre {
+        grid-area: desc;
+        /* background-color: lightcoral; */
+    }
+
+    .nombre .nombreCentrado{
+        /* background-color: red; */
+        width: 100%;
+    }
+    
+    .nombre .nombreCentrado input {        
+        border-radius: 5px;
+        margin: 5px 0px;
+        padding: 5px;
+
+    }
+
+    .talla {
+        grid-area: talla;        
+        /* background-color: lightblue; */
+    }
+
+    .color {
+        grid-area: color;
+        /* background-color: lightgoldenrodyellow; */
+    }
+    
+    .imagen1 {
+        grid-area: imagen1;
+        /* background-color: lightgreen; */
+    }
+
+    .imagen2 {
+        grid-area: imagen2;
+        /* background-color: lightyellow; */
+    }
+
+    .cantidad {
+        grid-area: cantidad;
+        /* background-color: lightpink; */
+    }
+    
+    .precio {
+        grid-area: precio;
+        /* background-color: lightgray; */
+    }
+
+    .boton { 
+        grid-area: boton;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px; /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
 }
+
 
 /* Estilos para escritorio */
 @media(min-width: 1250px){
