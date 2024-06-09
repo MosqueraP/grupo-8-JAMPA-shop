@@ -1,4 +1,19 @@
-let tarjeta = document.getElementById("tarjeta");/* se llama los id del html */
+/* se llama los id del html */
+let tarjeta = document.getElementById("tarjeta");
+
+let atras = document.getElementById("atras");
+let informacionPagina = document.getElementById("informacionPagina");
+let siguiente = document.getElementById("siguiente");
+let pagina = 1
+
+siguiente.addEventListener("click", ()=>{
+    pagina +=1;
+    console.log("si funciona");
+})
+atras.addEventListener("click", ()=>{
+    pagina -=1;
+    console.log("super funciona");
+})
 
 let llamar = localStorage.getItem("productos"); /* llamamos el localStorage suministrado */ 
 console.log(llamar);
@@ -28,7 +43,6 @@ for (categoria in convertir){
             </div>
             </div>
             `
-
         });
     }
 }
