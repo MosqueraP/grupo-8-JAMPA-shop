@@ -2,28 +2,92 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INVENTARIO</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- importacion de iconos -->
-  <link rel="stylesheet" href="/maqueta/estilos/admin/inventario.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTARIO</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- importacion de iconos -->
+    <link rel="stylesheet" href="/maqueta/estilos/admin/inventario.css">
 </head>
 
 <body>
-  <div class="contenedorPrincipal"><!--Encabezado Andres -->
+    <div class="contenedorPrincipal"><!--Encabezado Andres -->
 
-    <header class="encabezado" id="encabezadohead">
-    </header>
-    <div class="contenidoTotal">
+        <header class="encabezado" id="encabezadohead">
+        </header>
+        <div class="contenidoTotal">
+
+            <h2>Registro de Producto</h2>
+    <form class="productForm">
+        <div class="nombre" id="nombre">
+            <div class="nombreCentrado">
+                <label for="productNombre">Nombre del producto:</label>
+                <input type="text" id="productNombre" name="productNombre"
+                    placeholder="Nombre" required>
+            </div>
+        </div>
+        <div class="precio">
+            <div class="precioCentrado">
+                <label for="productPrecio">Precio:</label>
+                <input type="number" id="productPrecio" name="productPrecio"
+                    placeholder="Precio" required>
+            </div>
+        </div>
+        <div class="talla">
+            <label for="talla">Talla:</label>
+            <select id="talla" name="talla" required>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="cantidad">
+            <div class="cantidadCentrado">
+                <label for="productCantidad">Cantidad:</label>
+                <input type="number" id="productCantidad" name="productCantidad"
+                    placeholder="Cantidad" required>
+            </div>
+        </div>
+        <div class="color">
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="blanco">Blanco</option>
+                <option value="Negro">Negro</option>
+                <option value="azul">Azul</option>
+                <option value="morado">Morado</option>
+                <option value="amarillo">Amarillo</option>
+            </select>
+        </div>
+        <div class="imagen1">
+            <div class="imagenCentrado">
+                <label for="productImagen1">Imagen 1:</label>
+                <input type="file" id="productImagen1" name="productImagen1"
+                    accept="image/*">
+            </div>
+        </div>
+        <div class="imagen2">
+            <div class="imagenCentrado">
+                <label for="productImagen2">Imagen 2:</label>
+                <input type="file" id="productImagen2" name="productImagen2"
+                    accept="image/*">
+            </div>
+        </div>
+        <div class="boton">
+            <button type="button" onclick="addProduct()">Agregar</button>
+        </div>
+    </form>
+
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+        </footer>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-    </footer>
-  </div>
 
-  <!-- Se vincula el archivo js -->
-  <script src="/maqueta/componentes/admin/js/navAdmin.js"></script>
+    <!-- Se vincula el archivo js -->
+    <script src="/maqueta/componentes/admin/js/navAdmin.js"></script>
 </body>
 
 </html>
