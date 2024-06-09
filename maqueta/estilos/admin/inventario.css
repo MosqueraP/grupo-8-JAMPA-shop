@@ -286,4 +286,71 @@ th, td {
 
 /* Estilos para escritorio */
 @media(min-width: 1250px){
+    .productForm {
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr); */
+        grid-template-rows: 60px 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: "desc desc cantidad precio talla color"
+                             "imagen1 imagen1 imagen2 imagen2 boton boton";
+        
+        gap: 1px;
+        /* max-width: 400px; */
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+        background-color: darkcyan;
+    }
+    
+
+    h2 {
+        color: darkcyan;
+        text-align: center;
+    }
+
+    .desc {
+        grid-area: desc;
+        /* background-color: lightcoral; */
+    }
+
+    .talla {
+        grid-area: talla;        
+        /* background-color: lightblue; */
+    }
+
+    .color {
+        grid-area: color;
+        /* background-color: lightgoldenrodyellow; */
+    }
+    
+    .imagen1 {
+        grid-area: imagen1;
+        /* background-color: lightgreen; */
+    }
+
+    .imagen2 {
+        grid-area: imagen2;
+        /* background-color: lightyellow; */
+    }
+
+    .cantidad {
+        grid-area: cantidad;
+        /* background-color: lightpink; */
+    }
+    
+    .precio {
+        grid-area: precio;
+        /* background-color: lightgray; */
+    }
+
+    .boton { 
+        grid-area: boton;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px; /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
 }
