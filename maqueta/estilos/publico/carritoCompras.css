@@ -1,0 +1,126 @@
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+.mainCarrito {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /* AGREGAR SOMBRA */
+  z-index: 100;
+  text-align: center;
+  right:-100%;
+  transition: 0.3s all ease-in-out;
+}
+
+.btnCerrarCarrito{
+    position: absolute;
+     color: white;
+    top: 18px;
+    left: 20px;
+}
+
+/* TITULO CARRITO */
+.tituloCarrito {
+  text-align: center;
+  padding: 15px;
+  background-color: #7c69bf;
+  color: #ffff;
+}
+
+/* CONTENEDOR PADRE DE CARDS DE PRODUCTOS */
+.contenedorProductos {
+  padding: 10px;
+}
+
+/* CARD BASE PARA UN PRODUCTO */
+.cardProducto {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid orange;
+  padding: 20px;
+}
+
+/* ATRIBUTOS DE LA IMAGEN DEL PRODUCTO */
+.cardProducto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* DESCRIPCIONES DEL PRODUCTO */
+.detallesProducto {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CONTENEDOR PRINCIPAL CANTIDAD PRODUCTO */
+.cantidadProducto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+/* BOTONES + y - */
+.cantidadProducto button {
+  background-color: transparent;
+  color: black;
+  width: 25px;
+  height: 25px;
+  border: 2px solid gray;
+  border-radius: 100%;
+}
+
+/* BOTON RESTAR PRODUCTOS */
+.btnEliminar {
+  background-color: rgb(255, 128, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  height: 25px;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+
+/* SECCIÓN RESUMEN DE COMPRA */
+.carritoResumen {
+  padding: 10px;
+  text-align: center;
+}
+
+/* BOTÓN PARA ELIMINAR TODO LO DEL CARRITO */
+.btnVaciarCarrito {
+  color: black;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 25px;
+}
+
+.carritoResumen .btnComprar {
+  background-color: rgb(255, 128, 0);
+  color: rgb(243, 243, 243);
+  border: none;
+  width: 100%;
+  height: 25px;
+  margin: 10px 0;
+}
+
+/* RESPONSIVE TABLET  */
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+@media (min-width: 744px) {
+  /* TAMAÑO CARRITO */
+  .mainCarrito {
+    width: 350px;
+  }
+}
+
+/* RESPONSIVE DESKTOP  */
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+@media (min-width: 1200px) {
+  .mainCarrito {
+    width: 400px;
+  }
+}
