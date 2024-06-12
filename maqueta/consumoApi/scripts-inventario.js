@@ -1,5 +1,12 @@
-let currentId = getMaxId() + 1; // Inicializa el ID con el máximo actual + 1
+// scripts-inventario.js
 
+document.addEventListener("DOMContentLoaded", function() {
+    cargarProductosDesdeJSON();
+});
+
+let currentId = 0;
+
+// Función para obtener el ID máximo actual
 function getMaxId() {
     const rows = document.querySelectorAll('#tablaProductosBody tr');
     let maxId = 0;
@@ -12,6 +19,20 @@ function getMaxId() {
     return maxId;
 }
 
+// Función para cargar productos desde el JSON
+function cargarProductosDesdeJSON() {
+    fetch('/maqueta/consumoApi/scripts-inventario-productos.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(producto => {
+                agregarProductoATabla(producto);
+            });
+            currentId = getMaxId() + 1; // Actualiza currentId después de cargar los productos
+        })
+        .catch(error => console.error('Error al cargar productos:', error));
+}
+
+// Función para agregar un nuevo producto desde el formulario
 document.getElementById('agregarProductoBtn').addEventListener('click', agregarProducto);
 
 function agregarProducto() {
@@ -32,27 +53,17 @@ function agregarProducto() {
         var imageUrl1 = e.target.result;
         reader2.onload = function(e) {
             var imageUrl2 = e.target.result;
-            // Crea una nueva fila en la tabla
-            var table = document.getElementById('tablaProductosBody');
-            var newRow = table.insertRow();
-
-            // Inserta las celdas en la nueva fila
-            var cell1 = newRow.insertCell(0);
-            var cell2 = newRow.insertCell(1);
-            var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
-            var cell5 = newRow.insertCell(4);
-            var cell6 = newRow.insertCell(5);
-            var cell7 = newRow.insertCell(6);
-
-            // Agrega el contenido a las celdas
-            cell1.innerHTML = id;
-            cell2.innerHTML = nombre;
-            cell3.innerHTML = "$" + parseFloat(precio).toFixed(2);
-            cell4.innerHTML = talla;
-            cell5.innerHTML = color;
-            cell6.innerHTML = '<img src="' + imageUrl1 + '" width="30">';
-            cell7.innerHTML = '<img src="' + imageUrl2 + '" width="30">';
+            // Crea un nuevo producto y lo agrega a la tabla
+            var nuevoProducto = {
+                id: id,
+                nombre: nombre,
+                precio: parseFloat(precio).toFixed(2),
+                talla: talla,
+                color: color,
+                imagen1: imageUrl1,
+                imagen2: imageUrl2
+            };
+            agregarProductoATabla(nuevoProducto);
 
             // Limpia el formulario después de agregar el producto
             document.getElementById('productoForm').reset();
@@ -62,6 +73,32 @@ function agregarProducto() {
     reader1.readAsDataURL(imagen1);
 }
 
+// Función para agregar un producto a la tabla
+function agregarProductoATabla(producto) {
+    // Crea una nueva fila en la tabla
+    var table = document.getElementById('tablaProductosBody');
+    var newRow = table.insertRow();
+
+    // Inserta las celdas en la nueva fila
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    var cell5 = newRow.insertCell(4);
+    var cell6 = newRow.insertCell(5);
+    var cell7 = newRow.insertCell(6);
+
+    // Agrega el contenido a las celdas
+    cell1.innerHTML = producto.id;
+    cell2.innerHTML = producto.nombre;
+    cell3.innerHTML = "$ " + producto.precio;
+    cell4.innerHTML = producto.talla;
+    cell5.innerHTML = producto.color;
+    cell6.innerHTML = '<img src="' + producto.imagen1 + '" width="30">';
+    cell7.innerHTML = '<img src="' + producto.imagen2 + '" width="30">';
+}
+
+// Función para filtrar la tabla
 function filtrarTabla(tipo) {
     const input = document.getElementById(`filtro${tipo.charAt(0).toUpperCase() + tipo.slice(1)}`).value.toLowerCase();
     const table = document.getElementById('tablaProductosBody');
