@@ -7,20 +7,20 @@
     <title>INVENTARIO</title>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- importacion de iconos -->
+    
     <link rel="stylesheet" href="/maqueta/estilos/admin/inventario.css">
 </head>
 
 <body>
-    <div class="contenedorPrincipal"><!--Encabezado Andres -->
+    <div class="contenedorPrincipal">
 
         <header class="encabezado" id="encabezadohead">
         </header>
         <div class="contenidoTotal">
             <h1>Nombre de usuario</h1>
-
+    
             <h2>Registro de Producto</h2>
-            <form class="productForm">
+            <form class="productForm" id="productoForm">
                 <div class="nombre" id="nombre">
                     <div class="nombreCentrado">
                         <label for="productNombre">Nombre del producto:</label>
@@ -62,23 +62,20 @@
                 <div class="imagen1">
                     <div class="imagenCentrado">
                         <label for="productImagen1">Imagen 1:</label>
-                        <input type="file" id="productImagen1" name="productImagen1"
-                            accept="image/*">
+                        <input type="file" id="productImagen1" name="productImagen1" accept="image/*">
                     </div>
                 </div>
                 <div class="imagen2">
                     <div class="imagenCentrado">
                         <label for="productImagen2">Imagen 2:</label>
-                        <input type="file" id="productImagen2" name="productImagen2"
-                            accept="image/*">
+                        <input type="file" id="productImagen2" name="productImagen2" accept="image/*">
                     </div>
                 </div>
                 <div class="boton">
-                    <button type="button" onclick="addProduct()">Agregar</button>
+                    <button type="button" id="agregarProductoBtn">Agregar</button>
                 </div>
             </form>
-
-
+    
             <h2>Lista de Productos</h2>
             <div class="filtros">
                 <div class="filtroId">
@@ -88,64 +85,67 @@
                         <button>Buscar</button>
                     </div>
                 </div>
-
+    
                 <div class="filtroNombre">
                     <label for="filtroNombre">Filtrar por Nombre:</label>
                     <div class="input-group">
-                        <input type="text" id="filtroNombre"
-                            onkeyup="filtrarTabla('nombre')">
+                        <input type="text" id="filtroNombre" onkeyup="filtrarTabla('nombre')">
                         <button>Buscar</button>
                     </div>
                 </div>
             </div>
-
+    
             <table class="tablaProductos">
-                <tr>
-                    <th>ID</th>
-                    <th>Descr</th>
-                    <th>Precio</th>
-                    <th>Talla</th>
-                    <th>Color</th>
-                    <th>Img1</th>
-                    <th>Img2</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Camiseta</td>
-                    <td>$25.00</td>
-                    <td>M</td>
-                    <td>Rojo</td>
-                    <td><img src="https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png" width="30"></td>
-                    <td><img src="https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png" width="30"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Camiseta</td>
-                    <td>$25.00</td>
-                    <td>M</td>
-                    <td>Rojo</td>
-                    <td><img src="https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png" width="30"></td>
-                    <td><img src="https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png" width="30"></td>
-                    
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Camiseta</td>
-                    <td data-label="Precio">$5.00</td>
-                    <td data-label="Talla">M</td>
-                    <td data-label="Color">Rojo</td>
-                    <td><img src="https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png" width="30"></td>
-                    <td><img src="https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png" width="30"></td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descr</th>
+                        <th>Precio</th>
+                        <th>Talla</th>
+                        <th>Color</th>
+                        <th>Img1</th>
+                        <th>Img2</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaProductosBody">
+                    <tr>
+                        <td>1</td>
+                        <td>Camiseta</td>
+                        <td>$25.00</td>
+                        <td>M</td>
+                        <td>Rojo</td>
+                        <td><img src="https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png" width="30"></td>
+                        <td><img src="https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png" width="30"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Camiseta</td>
+                        <td>$25.00</td>
+                        <td>M</td>
+                        <td>Rojo</td>
+                        <td><img src="https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png" width="30"></td>
+                        <td><img src="https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png" width="30"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Camiseta</td>
+                        <td>$5.00</td>
+                        <td>M</td>
+                        <td>Rojo</td>
+                        <td><img src="https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png" width="30"></td>
+                        <td><img src="https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png" width="30"></td>
+                    </tr>
+                </tbody>
             </table>
-
         </div>
         <!-- Footer -->
         <footer class="footer">
         </footer>
     </div>
 
+
     <!-- Se vincula el archivo js -->
+    <script src="/maqueta/consumoApi/scripts-inventario.js"></script>
     <script src="/maqueta/componentes/admin/js/navAdmin.js"></script>
 </body>
 
