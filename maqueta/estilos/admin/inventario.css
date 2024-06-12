@@ -9,7 +9,7 @@ Comenzar con mobile por buenas practicas */
 
 .contenidoTotal {
     width: 90%;
-    height: 100vh;
+    height: auto;
     margin: 0px auto;
     /* display: flex;
     flex-direction: column;
@@ -252,6 +252,10 @@ h2 {
 
 .tablaProductos tr td img{
     width: 30px;
+}
+
+.tablaProductos tbody {
+    /* background-color: red; */
 }
 
 /* Estilos para vista tablet */
