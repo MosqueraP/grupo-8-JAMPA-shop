@@ -5,6 +5,8 @@ Comenzar con mobile por buenas practicas */
 /* Estilos para mobile */
 
 
+/* @media screen and (max-width: 659px) { */
+
 .contenidoTotal {
     width: 90%;
     height: 100vh;
@@ -18,12 +20,14 @@ Comenzar con mobile por buenas practicas */
 .productForm {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 60px 45px 45px 60px;
+    grid-template-rows: 60px 45px 45px 60px 60px;
     /* grid-template-rows: repeat(4, 60px); */
-    grid-template-areas: "desc desc desc desc desc talla"
+    grid-template-areas: 
+        "desc desc desc desc desc cantidad"
+        "talla precio precio color color ."
         "imagen1 imagen1 imagen1 imagen1 imagen1 imagen1 "
         "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2"
-        "cantidad precio precio color color boton";
+        ". . boton boton . .";
 
     gap: 1px;
     /* max-width: 400px; */
@@ -34,14 +38,22 @@ Comenzar con mobile por buenas practicas */
     padding: 10px;
     box-sizing: border-box;
     /* Incluye el padding y border en el tamaño total del elemento */
-    background-color: red;
+    background-color: #f2f2f2;
 }
 
 
 
-h2 {
-    color: red;
+h1 {
+    font-size: 24px;
+    color: black;
     text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 25px;
 }
 
 .nombre {
@@ -82,23 +94,23 @@ h2 {
 }
 
 
+.imagenCentrado input {
+    margin-top: 5px;
+}
+
 .imagen1 {
     grid-area: imagen1;
     display: flex;
-}
-
-.imagen1 .imagenCentrado {
-    align-self: self-start;
-}
-
-.imagenCentrado input {
-    margin-top: 5px;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .imagen2 {
     grid-area: imagen2;
     display: flex;
     flex-direction: column;
+    flex-direction: column;
+    margin-top: 25px;
 }
 
 .imagen1,
@@ -106,6 +118,25 @@ h2 {
     cursor: pointer;
 
 }
+    
+.imagen1 .imagenCentrado label, 
+.imagen2 .imagenCentrado label,
+.productForm .nombreCentrado label,
+.precio .precioCentrado label,
+.talla label,
+.cantidad .cantidadCentrado label,
+.color label{
+    font-size: 18px;
+    /* color: red; */
+}
+
+.imagen1 .imagenCentrado label,
+.imagen2 .imagenCentrado label{
+    display: block;
+    align-self: self-start;
+    margin-top: 5px;
+}
+
 
 .cantidad {
     grid-area: cantidad;
@@ -130,14 +161,25 @@ h2 {
     flex-direction: column;
 }
 
+.filtroId .input-group input,
+.filtroNombre .input-group input{
+    border-radius: 5px;
+}
+
 .cantidadCentrado input,
-.precioCentrado input {
+.precioCentrado input,
+.filtroId .input-group,
+.filtroNombre .input-group {
     width: 80%;
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
 
 }
+
+/* .filtroId .input-group {
+    background-color: red;
+} */
 
 .boton {
     grid-area: boton;
@@ -181,30 +223,35 @@ h2 {
     /* Ajusta el espacio entre el input y el botón */
 }
 
-.input-group button {
+.input-group button, .boton button {
     padding: 5px 10px;
+    background-color: #033E8C;
+    color: white;
 }
 
-/*----------- Estilos para tabla o registros de productos mobile---------- */
+/*----------- Estilos session de los registros de productos mobile---------- */
+
 .tablaProductos {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
 }
 
-th {
+.tablaProductos th, .tablaProductos td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaProductos th {
+    background-color: #f2f2f2;
     color: red;
 }
 
-tr {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-    /* Ajusta el espaciado entre las filas si es necesario */
-}
-
-th,
-td {
-    padding: 5px 8px;
+.tablaProductos tr td img{
+    width: 30px;
 }
 
 /* Estilos para vista tablet */
@@ -215,9 +262,9 @@ td {
         grid-template-rows: 60px 45px 45px 60px;
         /* grid-template-rows: repeat(4, 60px); */
         grid-template-areas: "desc desc desc precio talla color"
+            "cantidad . . . . ."
             "imagen1 imagen1 imagen1 imagen1 imagen1 imagen1 "
-            "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2"
-            "cantidad boton boton . . .";
+            "imagen2 imagen2 imagen2 imagen2 imagen2 boton";
 
         gap: 1px;
         /* max-width: 400px; */
@@ -228,15 +275,9 @@ td {
         padding: 10px;
         box-sizing: border-box;
         /* Incluye el padding y border en el tamaño total del elemento */
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
     }
 
-
-
-    h2 {
-        color: blueviolet;
-        text-align: center;
-    }
 
     .nombre {
         grid-area: desc;
@@ -265,6 +306,20 @@ td {
         /* background-color: lightgoldenrodyellow; */
     }
 
+    
+
+    .imagen2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen1,
+    .imagen2 {
+        /* background-color: red; */
+        align-self: center;
+        
+    }
+
     .imagen1 {
         grid-area: imagen1;
         /* background-color: lightgreen; */
@@ -273,7 +328,25 @@ td {
     .imagen2 {
         grid-area: imagen2;
         /* background-color: lightyellow; */
+    }    
+    
+    .imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        /* color: red; */
     }
+
+
+    .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+    }
+
 
     .cantidad {
         grid-area: cantidad;
@@ -295,44 +368,45 @@ td {
         cursor: pointer;
     }
 
+    
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+       
+
     /* ----------- Filtros de la tabla table ----------- */
 
 
 
-    /*----------- Estilos para tabla o registros de productos table ---------- */
-    .tablaProductos {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        width: 100%;
-        border-collapse: collapse;
-        background-color: grey;
-    }
-
-    th {
-        color: red;
-        width: 90%;
-        text-align: start;
-        /* margin: 0px 5px; */
-    }
-
-    tr {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5px;
-        /* Ajusta el espaciado entre las filas si es necesario */
-    }
-
- 
-    th,
-    td {
-        width: 100%;
-        /* width: 162px; */
-        /* padding: 5px 8px; */
-        text-align: start;
-        margin: 0px 5px;
-    }
+    /*----------- Estilos para los registros de productos table ---------- */
+    
+.tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
 }
+
+.tablaProductos th, .tablaProductos td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaProductos th {
+    background-color: #f2f2f2;
+    color: red;
+}
+
+.tablaProductos tr td img{
+    width: 50px;
+}}
 
 
 
@@ -344,7 +418,7 @@ td {
         grid-template-rows: 60px 60px;
         /* grid-template-rows: repeat(4, 60px); */
         grid-template-areas: "desc desc cantidad precio talla color"
-            "imagen1 imagen1 imagen2 imagen2 boton boton";
+            "imagen1 imagen1 imagen2 imagen2 boton .";
 
         gap: 1px;
         /* max-width: 400px; */
@@ -355,15 +429,20 @@ td {
         padding: 10px;
         box-sizing: border-box;
         /* Incluye el padding y border en el tamaño total del elemento */
-        background-color: darkcyan;
+ 
     }
-
-
-    h2 {
-        color: darkcyan;
+    
+    h1 {
+        font-size: 24px;
         text-align: center;
     }
 
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        margin: 25px;
+    }
+    
     .desc {
         grid-area: desc;
         /* background-color: lightcoral; */
@@ -383,6 +462,23 @@ td {
         grid-area: imagen1;
         /* background-color: lightgreen; */
     }
+    
+    .imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        /* color: red; */
+    }
+
+    .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+        align-self: center;
+    }
 
     .imagen2 {
         grid-area: imagen2;
@@ -401,6 +497,9 @@ td {
 
     .boton {
         grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
         /* background-color: green; */
         color: white;
         text-align: center;
@@ -408,4 +507,15 @@ td {
         /* Ajusta según sea necesario */
         cursor: pointer;
     }
-}
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+    
+    .tablaProductos tr td img{
+        width: 100px;
+    }}
