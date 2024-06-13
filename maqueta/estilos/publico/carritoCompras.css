@@ -1,4 +1,21 @@
 /* CONTENEDOR MAIN CARRITO DE COMPRAS */
+html::-webkit-scrollbar{
+  appearance: none;
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+  background-color: transparent;
+  width: 10px;
+  border-radius: 20px; 
+}
+
+html::-webkit-scrollbar-thumb{
+  background: rgb(195, 195, 195);
+  width: 10px;
+  border-radius: 20px;
+}
+
 .mainCarrito {
   position: fixed;
   width: 100%;
@@ -42,6 +59,23 @@
 
 .contenedorCards{
   overflow-y: scroll;
+}
+
+.contenedorCards::-webkit-scrollbar{
+  appearance: none;
+  width: 5px;
+}
+
+.contenedorCards::-webkit-scrollbar-track{
+  background-color: var(--naranjaOscuro-color);
+  width: 5px;
+  border-radius: 20px; 
+}
+
+.contenedorCards::-webkit-scrollbar-thumb{
+  background: var(--azul-color);
+  width: 5px;
+  border-radius: 20px;
 }
 
 /* CARD BASE PARA UN PRODUCTO */

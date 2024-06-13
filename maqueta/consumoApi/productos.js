@@ -38,7 +38,7 @@ for (categoria in convertir){
             <h4 class="precio">$ ${element.precio}</h4>
             </div>
             <div class="opciones">
-                <button>COMPRAR</button>
+                <button id="btnComprar">COMPRAR</button>
                 <a href="#">Ver Detalle</a>
             </div>
             </div>
