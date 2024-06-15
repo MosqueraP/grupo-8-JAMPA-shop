@@ -3,185 +3,202 @@
 /* IMPORTANTE
 Comenzar con mobile por buenas practicas */
 /* Estilos para mobile */
-@media(min-width: 200px){
-.contenidoTotal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-      
 
+.contenidoTotal {
+  margin-top: 0%;
 }
+
 /*ESTILOS DEL CONTENEDOR CON NOMBRE, IMAGEN Y TEXTOS*/
-.inforProducto{
+
+.inforProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+}
+
+.nombreProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*ESTILOS DE LA TARJETA DE LA IMAGEN Y DETALLE DE PRODUCTO*/
+.contenidoProducto {
+    background-color: var(--gris-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
-    width: 95%;
-    
-}
-/*ESTILOS DE LA TARJETA DE LA IMAGEN Y DETALLE DE PRODUCTO*/ 
-.contenidoProducto{
-background-color:var(--gris-color);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 85%;
-height: 90%;
-border-radius: 20px;
-box-shadow: 0px 0px 10px 0px;
-margin-top: 4%;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px;
+    padding-top: 10px;
+    margin-top: 120px;
+    gap: 10px;
 }
 
 /* ESTILO DE LA IMAGEN*/
-.imgProducto{
-    width: 80%;    
-    object-fit: cover;
-    object-position: top;
-    }
-.imgProducto:hover{
-    width: 120%; 
+.imgProducto {
+  width: 80%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.escritorio{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 /*ESTILOS PARA LA DESCRIPCIÓN DEL PRODUCTO*/
-.descripcionProducto{
-    padding: 5%;
-    text-align: center;
-    color: var(--negro-color);
+.descripcionProducto {
+  text-align: center;
+  color: var(--negro-color);
+  width: 100%;
+  font-size: 22px;
+}
+.descripcionProducto h2{
+  display: none;
+}
+/*ESTILOS PARA SECCIÓN DE CANTIDAD*/
+.colorCantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
 }
 
-/*ESTILOS PARA SECCIÓN DE COLORES Y CANTIDAD*/
-.colorCantidad{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 15%;    
-    padding-bottom: 5%;
-}
-/*ESTILOS PARA LOS BOTONES DE COLOR*/
-.colorButton {
-    border: none;
-    border-radius: 55%;
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
+/*ESTILOS TALLAS*/
+.tallas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
 }
 
-}
 
 /*ESTILOS PRECIO*/
 .precio {
-    color:var(--naranjaOscuro-color);
-    padding: 5%;
+  color: var(--naranjaOscuro-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /*ESTILOS BOTON CARRITO*/
-.carrito{
-    display: flex;
-    align-items: center; 
-    padding: 5%;
-    margin-top: 5%;
-    
-    
-}
-.carrito button{
-    font-family: "Montserrat", sans-serif;
-    background-color: var(--naranjaOscuro-color);
-    color: #FFFFFF;
-    width: 130%;
-    border-radius: 10px;
-    font-size: 22px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.1s ease-in-out;       
+.carrito {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 20%;
+
 }
 
-.carrito button:hover{
-    background-color: var(--azul-color);
-    border-color: var(--azul-color);
+.carrito button {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--naranjaOscuro-color);
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  width: 75%;
+  height: 100%;
 }
-        
-.imgCarrito{
-    width: 10%;    
-    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(120deg) brightness(103%) contrast(101%);
+
+.carrito button:hover {
+  background-color: var(--azul-color);
+  border-color: var(--azul-color);
+}
+
+.frase {
+  text-align: center;
+  color: var(--azul-color);
 }
 
 /*ESTILOS PARA FRASE MOTIVACIONAL*/
-.frase{
-  position: relative;
-  top: 35px;
-  left: 3px;
-}
+
 
 /* Estilos para tablet */
-@media(min-width: 659px){
-    .contenidoProducto{
-        width: 65%;
-        height: 60%;
-        }
-        
-        /*ESTILOS TITULO - NOMBRE  PRODUCTO*/
-        .nombreProducto{
-            font-size: 25px; 
-        }
-        /* ESTILO DE LA IMAGEN*/
-        .imgProducto{
-            width: 70%;    
-            object-fit: cover;
-            object-position: top;
-            }
-    
-    /*ESTILOS PARA LA DESCRIPCIÓN DEL PRODUCTO*/
+
+@media(min-width: 659px) {
+
+  .contenidoTotal {
+    margin-top: -20px;
+  }
+  
+  /*ESTILOS TITULO - NOMBRE  PRODUCTO*/
+  .nombreProducto {
+    font-size: 20px;
+  }
+
+  /*ESTILOS DE CANTIDAD*/
+  .colorCantidad {
+    font-size: 20px;
+  }
+
+  .tallas {
+    font-size: 20px;
+  }
+
+/*ESTILOS PRECIO*/
+.precio {
+  font-size: 20px;
+}
+
+/*ESTILOS BOTON CARRITO*/
+
+.carrito button {
+  font-size: 25px;
+}
+
+/*ESTILOS PARA FRASE MOTIVACIONAL*/
+.frase {
+  position: relative;
+}
+
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+
+.contenidoProducto{
+  display: grid;
+  grid-template-areas: "til des"
+                       "men men";             
+  flex-direction: row;
+}
+  /*ESTILOS PARA FRASE MOTIVACIONAL*/
+  .frase {
+    display: grid; 
+    grid-area: men;
+    }
+    .escritorio{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      height: 90%;
+      width: 400px;
+    }
+    .descripcionProducto h2{
+      display: block;
+          }
     .descripcionProducto{
-        font-size: 25px; 
-    }
-    
-    /*ESTILOS PARA SECCIÓN DE COLORES Y CANTIDAD*/
-    .colorCantidad{
-        font-size: 25px; 
-    }
-    /*ESTILOS PARA LA INFOR DE TALLAS*/
-    .tallas{
-        font-size: 22px;   
-    }
-    /*ESTILOS PRECIO*/
-    .precio {
-        font-size: 35px; 
-    }
-    
-    /*ESTILOS BOTON CARRITO*/
-    .carrito{
-        margin-top: 0%; 
-    }
-    .carrito button{ 
-        font-size: 28px;    
-    }
-            
-    
-    /*ESTILOS PARA FRASE MOTIVACIONAL*/
-    .frase{
-      position: relative;
-      top: -13px;
-      font-size: 23px; 
-    }
-    }
-    
-    
-    /* Estilos para escritorio */
-    @media(min-width: 1250px){
-    
-        .contenidoProducto{
-            width: 30%;
-            height: 35%;
-            }         
-
-        /*ESTILOS PARA FRASE MOTIVACIONAL*/
-        .frase{
-        top: -25px;
-      font-size: 23px; 
-        }
-    }
-
+      gap: 10px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+   }
+}
