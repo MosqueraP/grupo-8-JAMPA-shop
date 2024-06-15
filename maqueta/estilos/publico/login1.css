@@ -5,7 +5,115 @@ Comenzar con mobile por buenas practicas */
 /* Estilos para mobile */
 
 /* recordar que la clase contenido total tiene un margintop  */
+.contenedorPrincipal{
+    background-color: var(--gris-color);
+    justify-content: center;
+    align-items:center;
+}
+.contenidoTotal{
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90vh;
+    border-radius: 15px;
+    margin: 0;
+}
+.logoo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoo img{
+    width: 300px;
+}
+.secRegistro, .secIngresar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Estilos para formularios */
+.registroForm, .ingresarForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.secRegistro input, .secIngresar input{
+    border-radius: 5px;
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 5px;
+    width: 100%;
+    padding: 15px;
+    outline: none;/* Elimina lineas de leccion  */
+    border: none;
+}
+.nombres,.apellidos, .correo, .password, .passwordconf,.correoIng, .passwordIng{
+    position: relative;
+    font-size: 14px;
+    width: 250px;
+    color: var(--negro-color)
+}
+.secRegistro label, .secIngresar label{
+    position: absolute;
+    left: 2px;
+    padding: 5px 8px;
+}
+/* animacion para los inputs */
+.secRegistro input:focus ~ label,.secRegistro input:valid ~ label,.secIngresar input:focus ~ label,.secIngresar input:valid ~ label{
+    color:var(--blanco-color);
+    transform: translateY(-90%);
+    transition: .4s;
+}
 
+.botonesRegis, .botonesIngresar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.botonesRegis button, .botonesIngresar button{
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.crear:hover{
+    background-color: var(--naranjaOscuro-color);
+    color: var(--blanco-color);
+}
+.ingresa:hover{
+    background-color: #E3E3E3;
+}
+.volver{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volver a{
+    color: var(--blanco-color);
+    text-decoration: none;
+}
+.volver a:hover{
+    color: var(--naranjaOscuro-color);
+}
+
+.secIngresar{
+    display: none;
+}
 /* Estilos para tablet */
 @media(min-width: 659px){
 }
