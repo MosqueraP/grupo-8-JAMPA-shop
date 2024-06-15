@@ -26,7 +26,14 @@ Comenzar con mobile por buenas practicas */
   flex-direction: column;
   align-items: center;
 }
-
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {
+  font-size: 40px;
+  color: var(--azul-color);
+  position: relative;
+  left: 118px;
+  bottom: 48px;
+}
 /*ESTILOS DE LA TARJETA DE LA IMAGEN Y DETALLE DE PRODUCTO*/
 .contenidoProducto {
     background-color: var(--gris-color);
@@ -132,7 +139,11 @@ Comenzar con mobile por buenas practicas */
 /* Estilos para tablet */
 
 @media(min-width: 659px) {
-
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {       
+  left: 250px;
+  bottom: 25px;
+}
   .contenidoTotal {
     margin-top: -20px;
   }
@@ -171,7 +182,10 @@ Comenzar con mobile por buenas practicas */
 
 /* Estilos para escritorio */
 @media(min-width: 1250px) {
-
+  .btnCerrar {       
+    left: 250px;
+    bottom: 25px;
+    }
 .contenidoProducto{
   display: grid;
   grid-template-areas: "til des"
@@ -201,4 +215,10 @@ Comenzar con mobile por buenas practicas */
       display: flex;
       flex-direction: column;
    }
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {
+  left: 83%;
+  bottom: 57%;
+  position: absolute;
 }
+  }

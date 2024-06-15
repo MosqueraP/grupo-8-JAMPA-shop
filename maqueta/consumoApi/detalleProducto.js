@@ -18,10 +18,14 @@ for (categoria in convertir) {
         element.colores.map(l => console.log(l))
         inforProducto.innerHTML += `
           
-            <div class="contenidoProducto">   
+            <div class="contenidoProducto"> 
+            <div class="btnCerrar"> 
+             <i class="bi bi-x-circle" ></i>
+             </div>
               <div class="nombreProducto">
                       <h2>${element.nombre}</h2>
                       <img class="imgProducto" src='${element.imagen}'>
+                      
               </div> 
                         
               
