@@ -1,25 +1,22 @@
 @import url(/maqueta/estilos/styles.css);
 
-
 .contenidoHome {
-    background-color: blue;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* SECCION DEL BANNER */
 .contenedorBanner {
   display: flex;
-  width: 100%;
-  background-color: red;
+  /* width: 100%;
   position: relative;
   overflow: hidden;
+  object-fit: cover; */
 }
 
 .contenedorBanner img {
-  object-fit: cover;
   width: 100%;
 }
 /* Texto Banner */
@@ -45,10 +42,92 @@
   padding: 10px;
   color: var(--blanco-color);
   border-radius: 10px;
-cursor: pointer;
+  cursor: pointer;
 }
 
-.btnProductos:hover{
-    background-color: var(--azul-color);
+.btnProductos:hover {
+  background-color: var(--azul-color);
 }
 
+
+/* PRODUCTOS */
+
+
+/* DONACIONES */
+
+.donaciones{
+  text-align: center;
+  width: 100% ;
+  overflow: hidden;
+}
+
+.donaciones h2{
+  margin: 15px;
+}
+
+.donacionesImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  object-fit:contain;
+}
+
+.donaciones img{
+  height: 350px;
+}
+
+
+.colorBanner{
+  background-color:rgb(117, 117, 117);
+  opacity: 30%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.textDonaciones{
+  width: 80%;
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  top: 190px;
+  right: 48px;
+}
+
+.textDonaciones p{
+  display: none;
+}
+
+.btnQuieroAyudar{
+margin-top: 10px;
+padding: 15px;
+background-color: var(--naranjaOscuro-color);
+border: none;
+border-radius: 10px;
+color: var(--blanco-color);
+}
+
+.btnQuieroAyudar:hover {
+  background-color: var(--azul-color);
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+
+
+/* SECCIÓN ESTADISTICAS */
+.estadisticas{
+    background-color: var(--naranjaOscuro-color);
+    color: var(--blanco-color);
+    /* width: 95%; */
+    height: 100px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    border-radius: 15px;
+}
