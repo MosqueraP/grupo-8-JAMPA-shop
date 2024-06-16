@@ -14,7 +14,7 @@ encabezadohead.innerHTML = `
     <li class='itemBarra3'><a href='/maqueta/paginas/publico/nosotros.html'>NOSOTROS</a></li>
     <li class='itemBarra4'><a href='/maqueta/paginas/publico/contactanos.html'>CONTACTANOS</a></li>
     <li class='itemCerrarSesion' id='cerrar'><a href='#iniciar'>CERRAR SESION</a></li>
-    <li class='itemIniSesion' id='iniciar'><a href='#cerra'>INICIAR SESION</a></li>
+    <li class='itemIniSesion' id='iniciar'><a href='/maqueta/paginas/publico/login1.html'>INICIAR SESION</a></li>
     </ul>
     <a class='icoMenu'  href='#ham'><i class='bi bi-list'></i></a>
     <a class='icoCerrar' href='#'><i class='bi bi-x-lg'></i></a>
@@ -23,6 +23,6 @@ encabezadohead.innerHTML = `
     <button><i class='bi bi-search'></i></button>
     <input type='text' placeholder='Busca tu producto'>
     </div>
-    <a class='icoUser' href=''><i class='bi bi-person'></i></a>
+    <a class='icoUser' href='/maqueta/paginas/publico/login1.html'><i class='bi bi-person'></i></a>
     <a class='icoCarrito' href=''><i class='bi bi-cart3'></i></a>
     </div>`
