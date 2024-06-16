@@ -7,6 +7,7 @@
   --gris-color: #E3E3E3;
   --blanco-color: #FFFFFF;
   --negro-color: #1B1B1B;
+  --gris-claro: #F2F2F2;
 }
 
 /* *FORMATEAR PAGINA */
@@ -169,9 +170,7 @@ body {
   list-style: none;
   width: 300px;
   height: 60px;
-  /* background-color: var(--blanco-color); */
   border-radius: 10px;
-  /* box-shadow: 0px 0px 4px 0px var(--negro-color); */
 }
 .barraNavegacion a {
   text-decoration: none;
