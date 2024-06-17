@@ -124,7 +124,7 @@ Comenzar con mobile por buenas practicas */
     box-shadow: 0px 0px 10px 0px;
     color: var(--blaco-color);
 }
-/* Estilos volver */
+/* Estilos volver al inicio */
 .volver{
     display: flex;
     justify-content: center;
