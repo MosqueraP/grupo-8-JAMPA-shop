@@ -217,8 +217,9 @@ Comenzar con mobile por buenas practicas */
    }
 /* ESTILOS BOTÓN CERRAR MODAL*/
 .btnCerrar {
-  left: 83%;
-  bottom: 57%;
   position: absolute;
+  transform: translate(-50%,-50%);
+  left: 73%;
+  bottom: 60%;
 }
   }
