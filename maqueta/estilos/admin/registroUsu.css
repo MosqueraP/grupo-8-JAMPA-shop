@@ -179,8 +179,80 @@ h1 {
 }}
 
 
-
-
-
 /* Estilos para escritorio */
-@media(min-width: 1250px) {}
+@media(min-width: 1250px) {
+    .filtros {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: 
+            "filId filNomb filNomb . . . ";
+    
+        gap: 10px;
+        margin: 10px;
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+       
+        background-color: #f2f2f2;
+    }
+
+    .filtroId{
+        grid-area: filId;
+    }
+    
+    .filtroNombre{
+        grid-area: filNomb;
+    
+    }
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    /*.imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        color: red; 
+    }*/
+
+    /* .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+        align-self: center;
+    } */
+
+    .boton {
+        grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+    
+    .tablaProductos tr td img{
+        width: 100px;
+    }}
