@@ -1,12 +1,18 @@
 // scripts-inventario.js
 
+/*
+evento que se dispara en automatico cuando el Dom o la pagina se hata cargado
+y ayuda para que el json funcione ligero en las funcionalidades de los filtros
+*/
 document.addEventListener("DOMContentLoaded", function() {
     cargarProductosDesdeJSON();
 });
 
-let currentId = 0;
+let currentId = 0; // inicializa los id en 0
 
-// Función para obtener el ID máximo actual
+/* Función para obtener el ID máximo actual para operar con el incrementrarlos luego 
+despues de cada registro
+*/
 function getMaxId() {
     const rows = document.querySelectorAll('#tablaProductosBody tr');
     let maxId = 0;
@@ -19,7 +25,7 @@ function getMaxId() {
     return maxId;
 }
 
-// Función para cargar productos desde el JSON
+// Función para cargar productos desde el JSON y que incremente Id en uno
 function cargarProductosDesdeJSON() {
     fetch('/maqueta/consumoApi/scripts-inventario-productos.json')
         .then(response => response.json())
@@ -27,6 +33,7 @@ function cargarProductosDesdeJSON() {
             data.forEach(producto => {
                 agregarProductoATabla(producto);
             });
+            // obtenido el ultimo Id incrementamos apartir de el
             currentId = getMaxId() + 1; // Actualiza currentId después de cargar los productos
         })
         .catch(error => console.error('Error al cargar productos:', error));

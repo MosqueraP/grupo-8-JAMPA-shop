@@ -20,7 +20,7 @@ Comenzar con mobile por buenas practicas */
 
 h1 {
     font-size: 18px;
-    color: red;
+    color: black;
     text-align: center;
     margin: 25px;
 }
@@ -111,8 +111,16 @@ h1 {
 
 .tablaClientes th {
     background-color: #f2f2f2;
-    color: red;
+    color: black;
+    word-break: break-word; /* Permite dividir palabras largas */
+    /* overflow: hidden; */
+    /* max-width: 15px; */
 }
+
+/* .tablaClientes th:hover{
+    transform: scale(2);
+
+} */
 
 .tablaClientes tr td img{
     width: 30px;
@@ -171,7 +179,7 @@ h1 {
 
 .tablaClientes th {
     background-color: #f2f2f2;
-    color: red;
+    color: black;
 }
 
 .tablaClientes tr td img{
