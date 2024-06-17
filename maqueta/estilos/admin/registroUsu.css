@@ -141,7 +141,7 @@ h1 {
         padding: 10px;
         box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
        
-        background-color: #f2f2f2;
+        /* background-color: #f2f2f2; */
     }
 
     .filtroId{
@@ -198,7 +198,7 @@ h1 {
         padding: 10px;
         box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
        
-        background-color: #f2f2f2;
+        /* background-color: #f2f2f2; */
     }
 
     .filtroId{
