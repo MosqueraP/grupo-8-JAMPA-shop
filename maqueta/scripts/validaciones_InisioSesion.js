@@ -14,10 +14,6 @@ console.log(correoIng)
 ingresarForm.addEventListener('submit', (e) => {
     e.preventDefault(); // evita que el formulario se refresque
 
-    // Busca si el correo ingresado existe en usuariosLocal
-    //const usuarioEncontrado = usuariosLocal.find(usuario => usuario.correo === correoIng);
-
-
     console.log(usuariosLocal.find((usuario) => {
 
         if (correoIng.value != usuario.correo) {
