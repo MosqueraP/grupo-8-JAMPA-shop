@@ -244,7 +244,7 @@ Comenzar con mobile por buenas practicas */
 }
 .logoo1 img, .logoo2 img{
     width: 80%;
-    height: 32vh;
+    height: 28vh;
     object-fit: contain;
     object-position:bottom;
 }
@@ -317,8 +317,5 @@ Comenzar con mobile por buenas practicas */
 }
 .volver a{
     color: var(--negro-color);
-}
-.dinami{
-
 }
 }
