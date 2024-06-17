@@ -5,7 +5,7 @@ const correo = document.getElementById("correo");
 const password = document.getElementById("password");
 const passwordconf = document.getElementById("passwordconf");
 let usuarioRegistrados = [];
-const usuariosLocal = JSON.parse(localStorage.getItem("nuevoUsuario"));
+export const usuariosLocal = JSON.parse(localStorage.getItem("nuevoUsuario"));
 // console.log(usuariosLocal)
 
 if(usuariosLocal != null){
