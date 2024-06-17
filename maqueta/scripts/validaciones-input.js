@@ -4,9 +4,32 @@ const apellidos = document.getElementById("apellidos");
 const correo = document.getElementById("correo");
 const password = document.getElementById("password");
 const passwordconf = document.getElementById("passwordconf");
+let usuarioRegistrados = [];
+export const usuariosLocal = JSON.parse(localStorage.getItem("nuevoUsuario"));
+// console.log(usuariosLocal)
+
+if(usuariosLocal != null){
+  usuarioRegistrados = usuariosLocal
+}
+
 
 registroForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // VALIDACIÓN UN CAMPO VACIO
+
+  if (
+    nombres.value === "" ||
+    apellidos.value === "" ||
+    correo.value === "" ||
+    password.value === "" ||
+    passwordconf.value === ""
+  ) {
+    return Swal.fire({
+      text: "Debes ingresar todos los valores",
+      confirmButtonColor: "#F27F0C",
+    });
+  }
 
   // VALIDACIÓN NOMBRE
   if (nombres.value === "" || nombres.value.length < 3) {
@@ -48,20 +71,21 @@ registroForm.addEventListener("submit", (e) => {
     });
   }
 
-  // VALIDACIÓN UN CAMPO VACIO
+// CREACIÓN DE NUEVO USUARIO 
+const nuevoUsuario = {
+  "nombres": nombres.value,
+  "apellidos": apellidos.value,
+  "correo": correo.value,
+  "password": password.value
+} 
+//console.log(nuevoUsuario) // verificar en consola
 
-  if (
-    nombres.value === "" ||
-    apellidos.value === "" ||
-    correo.value === "" ||
-    password.value === "" ||
-    passwordconf.value === ""
-  ) {
-    return Swal.fire({
-      text: "Debes ingresar todos los valores",
-      confirmButtonColor: "#F27F0C",
-    });
-  }
-registroForm.reset()
+usuarioRegistrados.push(nuevoUsuario);
+console.log(usuarioRegistrados) // verificar en consola
   
+registroForm.reset()
+
+localStorage.setItem("nuevoUsuario", JSON.stringify(usuarioRegistrados))
+
+
 });

@@ -70,7 +70,7 @@
         <div class="ingresar">
           <h2>Ingresar</h2>
         </div>
-        <form class="ingresarForm" action="" method="post" novalidate>
+        <form class="ingresarForm" id="ingresarForm" action="" method="post" novalidate>
 
           <div class="correoIng">
             <input type="email" name="correoIng" id="correoIng" required>
@@ -82,7 +82,7 @@
             <label for="passwordIng">Contraseña</label>
           </div>
           <div class="ingresaI">
-          <input type="button" onclick="" value="Iniciar Sesión">
+          <input type="submit" value="Iniciar Sesión">
           </div>
         </form>
         <div class="btnCrear" id="btnCrear">
@@ -98,7 +98,8 @@
 
   <!-- Se vincula el archivo js -->
   <script src="/maqueta/scripts/login.js"></script>
-  <script src="/maqueta/scripts/validaciones-input.js"></script>
+  <script src="/maqueta/scripts/validaciones-input.js" type="module"></script>
+  <script src="/maqueta/scripts/validaciones_InisioSesion.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.js" integrity="sha512-EETzuDes5NYDQpuTl1crNKcXk4ExLa3AUNNQJtqJsZ2Q9TTCSglaFI315jWZsZ/7lo9iSpBD5Dj67WE0vdP1ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
