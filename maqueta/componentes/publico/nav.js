@@ -25,4 +25,5 @@ encabezadohead.innerHTML = `
     </div>
     <a class='icoUser' href=''><i class='bi bi-person'></i></a>
     <a class='icoCarrito' href=''><i class='bi bi-cart3'></i></a>
+    <div></div>
     </div>`
