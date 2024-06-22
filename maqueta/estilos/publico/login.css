@@ -78,6 +78,14 @@ Comenzar con mobile por buenas practicas */
     transform: translateY(-90%);
     transition: .4s;
 }
+.olvido{
+    text-decoration: none;
+    color: var(--blaco-color);
+    font-size: 14px;
+}
+.olvido:hover{
+    color: var(--naranjaOscuro-color);
+}
 /* Estilos para los botones */
 .btnIng, .btnCrear{
     display: flex;
@@ -292,7 +300,6 @@ Comenzar con mobile por buenas practicas */
     height: 100%;
     gap: 28px;
 }
-
 .btnCrear{
     position: absolute;
     width: 50%;
