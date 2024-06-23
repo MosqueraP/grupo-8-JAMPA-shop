@@ -1,5 +1,6 @@
 import { usuariosLocal } from "./validaciones-input.js";
 
+
 // seleccionamos los los id de el HTML
 const ingresarForm = document.getElementById('ingresarForm'),
     correoIng = document.getElementById('correoIng'),
@@ -8,17 +9,15 @@ const ingresarForm = document.getElementById('ingresarForm'),
 console.log(correoIng)
 
 // validar el correo en consola
-// console.log(correoIng)
+console.log(correoIng)
 
 // escuchador funcion anonima
 ingresarForm.addEventListener('submit', (e) => {
     e.preventDefault(); // evita que el formulario se refresque
 
     console.log(usuariosLocal.find((usuario) => {
-
         if (correoIng.value != usuario.correo) {
             // alerta desde la libreria Swal.fire
-
             return Swal.fire({
                 text: "Correo no registrado",
                 confirmButtonColor: "#F27F0C",
@@ -28,19 +27,15 @@ ingresarForm.addEventListener('submit', (e) => {
                 text: "Contraseña invalida",
                 confirmButtonColor: "#F27F0C",
             })
-
         } else if (correoIng.value === usuario.correo && passwordIng.value === usuario.password) {
             return Swal.fire({
                 text: "Ingresaste exitosamente",
                 confirmButtonColor: "#F27F0C",
+            }).then(()=>{/* con .then seguido del callback tendra la funcion de direccionar al usuario al inicio*/
+                window.location.href ='/maqueta/paginas/publico/home.html'
             })
-
         } else {
             return
         }
-
-
     }))
-
-
 })

@@ -178,8 +178,17 @@ body {
 }
 .barraNavegacion a:hover{
   color: var(--naranjaOscuro-color);
+  text-decoration: underline 3px;
+  text-underline-offset: 5px;
+  transition: .4s all;
 }
 
+/* Estilo para el estado seleccionado */
+.activo{
+  color: var(--naranjaOscuro-color) !important;
+  text-decoration: underline 3px  !important;
+  text-underline-offset: 5px;
+}
 .icoUser {
   display: none;
 }

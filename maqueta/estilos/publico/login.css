@@ -23,6 +23,7 @@ Comenzar con mobile por buenas practicas */
     border-radius: 15px;
     margin: 0;
 }
+
 /* Estilos logo */
 .logoo1,.logoo2{
     width: 100%;
@@ -77,6 +78,14 @@ Comenzar con mobile por buenas practicas */
     color:var(--blanco-color);
     transform: translateY(-90%);
     transition: .4s;
+}
+.olvido{
+    text-decoration: none;
+    color: var(--blaco-color);
+    font-size: 14px;
+}
+.olvido:hover{
+    color: var(--naranjaOscuro-color);
 }
 /* Estilos para los botones */
 .btnIng, .btnCrear{
