@@ -1,0 +1,268 @@
+@import url(/maqueta/estilos/styles.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+
+.contenedorPrincipal {
+ position: relative;/* se aplica a todo el contenedor para poder usar el estilo de escritorio y que no se desborde */
+}
+/* .contenidoTotal {
+  margin-top: 0%;
+} */
+
+/*ESTILOS DEL CONTENEDOR CON NOMBRE, IMAGEN Y TEXTOS*/
+
+
+.inforProducto {
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;/* para que se posicione y no genere le afecte el scroll */
+  background-color: rgba(0, 0, 0, 0.548);
+  backdrop-filter: blur(10px);
+  left: 0;
+  top: 120px;
+  padding-top: 50px;
+  transform: scale(1);
+  animation-name: abierto; /* se usa @keyframes para darle la animacion */
+  animation-duration: .4s;
+}
+
+.modalcerrado {/* clase para que se agregue la animacion por medio de js */
+  animation-name: cerrado; /* Nombre de la animación de cierre */
+}
+.nombreProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {
+  font-size: 40px;
+  color: var(--azul-color);
+  position: relative;
+  left: 118px;
+
+}
+/*ESTILOS DE LA TARJETA DE LA IMAGEN Y DETALLE DE PRODUCTO*/
+.contenidoProducto {
+    background-color: var(--gris-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px;
+    gap: 10px;
+}
+
+/* ESTILO DE LA IMAGEN*/
+.imgProducto {
+  width: 60%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.escritorio{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*ESTILOS PARA LA DESCRIPCIÓN DEL PRODUCTO*/
+.descripcionProducto {
+  text-align: center;
+  color: var(--negro-color);
+  width: 100%;
+  font-size: 22px;
+}
+.descripcionProducto h2{
+  display: none;
+}
+/*ESTILOS PARA SECCIÓN DE CANTIDAD*/
+.colorCantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+}
+
+/*ESTILOS TALLAS*/
+.tallas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+
+/*ESTILOS PRECIO*/
+.precio {
+  color: var(--naranjaOscuro-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*ESTILOS BOTON CARRITO*/
+.carrito {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 20%;
+
+}
+
+.carrito button {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--naranjaOscuro-color);
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  width: 75%;
+  height: 100%;
+}
+
+.carrito button:hover {
+  background-color: var(--azul-color);
+  border-color: var(--azul-color);
+}
+
+.frase {
+  text-align: center;
+  color: var(--azul-color);
+}
+
+/*ESTILOS PARA FRASE MOTIVACIONAL*/
+
+
+/* Estilos para tablet */
+
+@media(min-width: 659px) {
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {       
+  left: 250px;
+  bottom: 25px;
+}
+/*   .contenidoTotal {
+    margin-top: -20px;
+  } */
+  
+  /*ESTILOS TITULO - NOMBRE  PRODUCTO*/
+  .nombreProducto {
+    font-size: 20px;
+  }
+
+  /*ESTILOS DE CANTIDAD*/
+  .colorCantidad {
+    font-size: 20px;
+  }
+
+  .tallas {
+    font-size: 20px;
+  }
+
+/*ESTILOS PRECIO*/
+.precio {
+  font-size: 20px;
+}
+
+/*ESTILOS BOTON CARRITO*/
+
+.carrito button {
+  font-size: 25px;
+}
+
+/*ESTILOS PARA FRASE MOTIVACIONAL*/
+.frase {
+  position: relative;
+}
+
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+  /* modal */
+  .inforProducto{
+    position: absolute;
+    bottom: 4px;
+    height: 100%;
+  }
+  .contenidoProducto {
+    height: 35%;
+    width: 70%;
+}
+  .btnCerrar {
+    top:16%;
+    right: 150%;
+    }
+.contenidoProducto{
+  display: grid;
+  grid-template-areas: "til des"
+                       "men men";             
+  flex-direction: row;
+}
+  /*ESTILOS PARA FRASE MOTIVACIONAL*/
+  .frase {
+    display: grid; 
+    grid-area: men;
+    }
+    .escritorio{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      height: 90%;
+      width: 400px;
+    }
+    .descripcionProducto h2{
+      display: block;
+          }
+    .descripcionProducto{
+      gap: 10px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+   }
+/* ESTILOS BOTÓN CERRAR MODAL*/
+.btnCerrar {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 73%;
+  bottom: 60%;
+}
+}
+
+@keyframes abierto {
+  from {
+      opacity: 0; /* Comienza con opacidad 0 (invisible) */
+      transform: scale(0.8); /* Empieza un poco más pequeño */
+  }
+  to {
+      opacity: 1; /* Termina con opacidad 1 (totalmente visible) */
+      transform: scale(1); /* Escala completa (normal) */
+  }
+}
+@keyframes cerrado {
+  from {
+      opacity: 1; /* Comienza con opacidad 1 (totalmente visible) */
+      transform: scale(1); /* Empieza con tamaño normal */
+  }
+  to {
+      opacity: 0; /* Termina con opacidad 0 (invisible) */
+      transform: scale(0.8); /* Escala un poco más pequeño */
+  }
+}

@@ -33,8 +33,8 @@ body {
   justify-content: space-between;
 }
 
+/* Estilos para el encabezado es normal */
 .encabezado {
-  /* Estilos para el encabezado es normal */
   width: 100%;
   height: 120px;
   background-color: var(--azul-color);

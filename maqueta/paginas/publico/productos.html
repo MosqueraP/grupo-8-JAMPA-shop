@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- importacion de iconos -->
   <link rel="stylesheet" href="/maqueta/estilos/publico/productos.css">
+  <link rel="stylesheet" href="/maqueta/estilos/publico/modal.css">
 </head>
 
 <body>
@@ -15,68 +17,78 @@
     <header class="encabezado" id="encabezadohead"><!-- Ya importado -->
     </header>
     <div class="contenidoTotal"><!-- contenido de la pagina -->
-     
+
       <div class="titulo">
-      <h1>PRODUCTOS</h1>
+        <h1>PRODUCTOS</h1>
       </div>
+      <!-- Barra de filtrar  -->
       <div class="contgrid">
-      <div class="filtrar" id="filtrar">
-        <h3>Barra de filtro</h3>
-        <p class="catTilulo">Categorias</p>
-        <div class="categoria">
-          <p>
-            <input type="checkbox"id="hombre"></label>
-            <label for="hombre">Hombres
-          </p>
-          <p>    
-        <input type="checkbox"id="mujer">
-        <label for="mujer">Mujeres</label>
-      </p>
-        <p>
-        <input type="checkbox"id="ninos">
-        <label for="ninos">Niños</label>
-      </p>
-        </div>
-        <p>Tallas</p>
+        <div class="filtrar" id="filtrar">
+          <h3>Barra de filtro</h3>
+          <!-- categorias -->
+          <p class="catTilulo">Categorias</p>
+          <div class="categoria">
+            <p>
+              <input type="checkbox" id="hombre"></label>
+              <label for="hombre">Hombres
+            </p>
+            <p>
+              <input type="checkbox" id="mujer">
+              <label for="mujer">Mujeres</label>
+            </p>
+            <p>
+              <input type="checkbox" id="ninos">
+              <label for="ninos">Niños</label>
+            </p>
+          </div>
+          <!-- Tallas -->
+          <p>Tallas</p>
           <div class="talla">
-        <p>
-        <input type="checkbox" name="l" id="l">
-        <label for="l">L</label>
-        </p>
-        <p>
-        <input type="checkbox" name="xl" id="xl">
-        <label for="xl">XL</label>
-        </p>
-        <p>
-        <input type="checkbox" name="xxl" id="xxl">
-        <label for="xxl">XXL</label>
-        </p>
-        <p>
-        <input type="checkbox" name="xxxl" id="xxxl">
-        <label for="xxxl">XXXL</label>
-        </p>
-        
+            <p>
+              <input type="checkbox" name="l" id="l">
+              <label for="l">L</label>
+            </p>
+            <p>
+              <input type="checkbox" name="xl" id="xl">
+              <label for="xl">XL</label>
+            </p>
+            <p>
+              <input type="checkbox" name="xxl" id="xxl">
+              <label for="xxl">XXL</label>
+            </p>
+            <p>
+              <input type="checkbox" name="xxxl" id="xxxl">
+              <label for="xxxl">XXXL</label>
+            </p>
+          </div>
         </div>
+        <!--Tarjeta de productos -->
+        <div class="tarjeta" id="tarjeta"></div>
+      <!-- detalle de producto -->
+      <div class="inforProducto" id="inforProducto"></div>
       </div>
-      <div class="tarjeta" id="tarjeta"></div><!--Tarjeta de productos -->
-    </div>
-    <div class="paginacion">
+
+      
+
+      <!-- paginacion -->
+      <div class="paginacion">
         <button id="atras">Atras</button>
         <span id="indicadorPagina"></span>
         <button id="siguiente">Siguiente</button>
+      </div>
     </div>
     </div>
-  </div>
 
 
-   <!-- Footer -->
-    <footer class="footer"> 
+    <!-- Footer -->
+    <footer class="footer">
     </footer>
   </main>
 
   <!-- Se vincula el archivo js -->
   <script src="/maqueta/componentes/publico/nav.js" type="module"></script>
   <script src="/maqueta/consumoApi/ejeLocalStorage.js" type="module"></script>
+  <script src="/maqueta/scripts/modal.js" type="module"></script>
   <script src="/maqueta/scripts/productos.js"></script>
 </body>
 
