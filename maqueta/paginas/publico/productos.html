@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <!-- importacion de iconos -->
   <link rel="stylesheet" href="/maqueta/estilos/publico/productos.css">
   <link rel="stylesheet" href="/maqueta/estilos/publico/carritoCompras.css">
+  <link rel="stylesheet" href="/maqueta/estilos/publico/modal.css">
 </head>
 
 <body>
@@ -20,9 +22,11 @@
       <div class="titulo">
         <h1>PRODUCTOS</h1>
       </div>
+      <!-- Barra de filtrar  -->
       <div class="contgrid">
         <div class="filtrar" id="filtrar">
           <h3>Barra de filtro</h3>
+          <!-- categorias -->
           <p class="catTilulo">Categorias</p>
           <div class="categoria">
             <p>
@@ -38,30 +42,37 @@
               <label for="ninos">Niños</label>
             </p>
           </div>
+          <!-- Tallas -->
           <p>Tallas</p>
           <div class="talla">
-            <p>
-              <input type="checkbox" name="l" id="l">
-              <label for="l">L</label>
-            </p>
-            <p>
-              <input type="checkbox" name="xl" id="xl">
-              <label for="xl">XL</label>
-            </p>
-            <p>
-              <input type="checkbox" name="xxl" id="xxl">
-              <label for="xxl">XXL</label>
-            </p>
-            <p>
-              <input type="checkbox" name="xxxl" id="xxxl">
-              <label for="xxxl">XXXL</label>
-            </p>
-
+                <p>
+                    <input type="checkbox" name="l" id="l">
+                    <label for="l">L</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="xl" id="xl">
+                    <label for="xl">XL</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="xxl" id="xxl">
+                    <label for="xxl">XXL</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="xxxl" id="xxxl">
+                    <label for="xxxl">XXXL</label>
+                </p>
+  </div>
           </div>
-        </div>
-        <div class="tarjeta" id="tarjeta"></div> <!--Tarjeta de productos -->
+          <!--Tarjeta de productos -->
+        <div class="tarjeta" id="tarjeta"></div>
+      <!-- detalle de producto -->
+      <div class="inforProducto" id="inforProducto"></div>
       </div>
-      <div class="paginacion">
+  
+      
+
+       <!-- paginacion -->
+          <div class="paginacion">
         <button id="atras">Atras</button>
         <span id="indicadorPagina"></span>
         <button id="siguiente">Siguiente</button>
@@ -82,6 +93,7 @@
   <!-- Se vincula el archivo js -->
    <script src="../../componentes/publico/nav.js"></script>
   <script src="/maqueta/consumoApi/ejeLocalStorage.js" type="module"></script>
+  <script src="/maqueta/scripts/modal.js" type="module"></script>
   <script src="/maqueta/scripts/productos.js"></script>
   <script src="../../componentes/publico/carritoComprasComponente.js"></script>
 <script src="../../scripts/carritoCompras.js"></script>
