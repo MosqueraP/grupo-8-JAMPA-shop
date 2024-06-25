@@ -24,7 +24,7 @@ encabezadohead.innerHTML = `
     <input type='text' placeholder='Busca tu producto'>
     </div>
     <a class='icoUser' href='/maqueta/paginas/publico/login.html'><i class='bi bi-person'></i></a>
-    <a class='icoCarrito' href=''><i class='bi bi-cart3'></i></a>
+    <a class='icoCarrito' href='#'><i class='bi bi-cart3' id='btnAbrirCarrito'></i></a>
     </div>`;
 
     const seleccionado = ()=> {
