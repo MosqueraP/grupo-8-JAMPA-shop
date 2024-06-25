@@ -25,28 +25,28 @@
           <h2>Registro</h2>
         </div>
 
-        <form class="registroForm" id="registroForm" >
+        <form class="registroForm" id="registroForm" novalidate>
           <div class="nombres">
-            <input type="text" name="nombres" id="nombres">
+            <input type="text" name="nombres" id="nombres" required>
             <label for="nombres">Nombres</label>
           </div>
           <div class="apellidos">
-            <input type="text" name="apellidos" id="apellidos">
+            <input type="text" name="apellidos" id="apellidos" required>
             <label for="apellidos">Apellidos</label>
           </div>
 
           <div class="correo">
-            <input type="email" name="correo" id="correo">
+            <input type="email" name="correo" id="correo" required>
             <label for="correo">Correo</label>
           </div>
 
           <div class="password">
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
             <label for="password">Contraseña</label>
           </div>
 
           <div class="passwordconf">
-            <input type="password" name="passwordconf" id="passwordconf">
+            <input type="password" name="passwordconf" id="passwordconf" required>
             <label for="passwordconf">Confirma la contraseña</label>
           </div>
           <div class="crearR">
@@ -62,7 +62,7 @@
         </div>
       </section>
 
-      <section class="secIngresar">
+      <section class="secIngresar" id="secIngresar">
         <div class="logoo2">
           <img src="https://i.postimg.cc/xdqv2rgS/logo-Naranja.png" alt="logo">
           <p>¡HOLA! <br>Si aun no tienes una cuenta por favor registrate aqui</p>
@@ -70,7 +70,7 @@
         <div class="ingresar">
           <h2>Ingresar</h2>
         </div>
-        <form class="ingresarForm" action="" method="post">
+        <form class="ingresarForm" id="ingresarForm" action="" method="post">
 
           <div class="correoIng">
             <input type="email" name="correoIng" id="correoIng" required>
@@ -82,7 +82,8 @@
             <label for="passwordIng">Contraseña</label>
           </div>
           <div class="ingresaI">
-          <input type="button" onclick="" value="Iniciar Sesión">
+            <!-- CAMBIAR TYPE A SUBMIT Y BORRAR CLIC -->
+          <input type="submit"  value="Iniciar Sesión"> 
           </div>
         </form>
         <div class="btnCrear" id="btnCrear">
@@ -98,7 +99,8 @@
 
   <!-- Se vincula el archivo js -->
   <script src="/maqueta/scripts/login.js"></script>
-  <script src="/maqueta/scripts/validaciones-input.js"></script>
+  <!-- ATRIBUTO MODULE PARA IMPORTAR  -->
+  <script src="/maqueta/scripts/validaciones-input.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.js" integrity="sha512-EETzuDes5NYDQpuTl1crNKcXk4ExLa3AUNNQJtqJsZ2Q9TTCSglaFI315jWZsZ/7lo9iSpBD5Dj67WE0vdP1ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 

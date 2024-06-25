@@ -5,6 +5,19 @@ const correo = document.getElementById("correo");
 const password = document.getElementById("password");
 const passwordconf = document.getElementById("passwordconf");
 
+
+let usuariosRegistrados = [];
+
+// TRAER DEL LOCAL STORAGE FORMATO JSON
+export const usuariosLocal = JSON.parse(localStorage.getItem("nuevoUsuario"))
+console.log(usuariosLocal);
+
+// NO SE BORRE DEL LOCAL STORAGE AL ACTUALIZAR Y CREAR UNO NUEVO
+if(usuariosLocal !== null){
+  usuariosRegistrados = usuariosLocal
+}
+
+
 registroForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -62,6 +75,22 @@ registroForm.addEventListener("submit", (e) => {
       confirmButtonColor: "#F27F0C",
     });
   }
-registroForm.reset()
+
+  // OCREACIÓN DE NUEVO USUARIO
+  const nuevoUsuario ={
+    "nombres": nombres.value,
+    "apellidos": apellidos.value,
+    "correo": correo.value,
+    "pasword": password.value
+  }
+
+  // console.log(nuevoUsuario);
+
+  usuariosRegistrados.push(nuevoUsuario)
   
+  registroForm.reset()  
+  // console.log(usuariosRegistrados);
+  localStorage.setItem("nuevoUsuario", JSON.stringify(usuariosRegistrados))
 });
+
+
