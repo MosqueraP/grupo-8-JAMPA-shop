@@ -250,16 +250,13 @@ Comenzar con mobile por buenas practicas */
     /* Elimina el titulo en esta vista */
   }
 
+  
 /* SEGUNDA SECCIÓN PARA TABLET */
 .mainEncuentranos{
   height: 350px;
 }
-iframe{
-  height: 400px;
-}
 
   /* Tercera seccion "Formulario (Jennifer)" */
-
   .mainFormulario{
     /* background-color: red; */
     position: relative;

@@ -16,7 +16,7 @@ for (categoria in productosHome) {
         contenedorTarjetasHomeJS.innerHTML += `<div id='tarjetaProductHome${prenda.producto_id}' class="tarjetaProductoHome">
         <div class="imgTarjetaHome"> <img src= ${prenda.imagen}>  </div>
         <p> ${prenda.nombre} </p> 
-        <p> ${prenda.precio} </p>
+        <p class="pOrange"> ${prenda.precio} </p>
         <button>Ver Detalle</button>
         </div>
         `

@@ -13,16 +13,21 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.contenedorBanner img {
+.bannerImg{
+  background-image: url(/maqueta/paginas/publico/jampa_banner.jpeg);
   width: 100%;
-  object-fit: cover;
-  display: block;
+  height: 400px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Texto Banner */
 .textoBanner {
+  display: grid;
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 20px;
@@ -33,6 +38,7 @@
   background: #033e8c62;
   padding: 20px;
   box-sizing: border-box;
+  gap: 10px
 }
 
 .textoBannerWeb {
@@ -53,61 +59,87 @@
   background-color: var(--azul-color);
 }
 
-
 /* PRODUCTOS */
 
-.productosDestacados{
-  background-color: aqua;
+.productosDestacados {
+  /* background-color: blueviolet; */
   width: 100%;
+  text-align: center;
 }
 
-.contenedorProducto{
-  background-color: blueviolet;
-  width:100%;
+.contenedorProducto {
+  /* background-color: red; */
+  width: 100%;
   height: 400px;
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
-
 }
 
-.contenedorTarjetasHome{
+.contenedorTarjetasHome {
+  /* background-color: aqua; */
   width: 270px;
-  background-color: green;
+  height: 420px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-.contenedorTarjetasHomeJS{
-  background-color: pink;
+.contenedorTarjetasHomeJS {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-
 }
 
-.tarjetaProductoHome{
-  background: red;
+.contenedorTarjetasHomeJS p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pOrange {
+  color: var(--naranjaOscuro-color);
+}
+
+.contenedorTarjetasHomeJS button {
+  background-color: var(--azul-color);
+  color: var(--blanco-color);
+  width: 120px;
+  height: 28px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.contenedorTarjetasHomeJS button:hover {
+  background-color: var(--naranjaOscuro-color);
+  border-color: var(--naranjaOscuro-color);
+  color: var(--blanco-color);
+}
+
+.tarjetaProductoHome {
+  background-color: var(--gris-color);
   width: 240px;
   height: 350px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   box-sizing: border-box;
   margin: 0 15px;
-  border-radius: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px 0px;
 }
 
-.tarjetaProductoHome p{
-width: 240px;
-text-align: center;
-
+.tarjetaProductoHome p {
+  width: 240px;
+  text-align: center;
 }
-.imgTarjetaHome{
-  background-color: aqua;
+.imgTarjetaHome {
   width: 100%;
   height: 210px;
   overflow: hidden;
@@ -116,47 +148,45 @@ text-align: center;
   align-items: center;
 }
 
-.imgTarjetaHome img{
+.imgTarjetaHome img {
   /* width: 100%; */
   height: 100%;
 }
 
 /* DONACIONES */
-
-.donaciones{
+.donaciones {
   text-align: center;
-  width: 100% ;
+  width: 100%;
   overflow: hidden;
 }
 
-.donaciones h2{
+.donaciones h2 {
   margin: 15px;
 }
 
-.donacionesImg{
+.donacionesImg {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   flex-direction: column;
   overflow: hidden;
-  object-fit:contain;
+  object-fit: contain;
 }
 
-.donaciones img{
+.donaciones img {
   height: 350px;
 }
 
-
-.colorBanner{
-  background-color:rgb(117, 117, 117);
+.colorBanner {
+  background-color: rgb(117, 117, 117);
   opacity: 30%;
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-.textDonaciones{
+.textDonaciones {
   width: 80%;
   position: absolute;
   color: white;
@@ -165,17 +195,17 @@ text-align: center;
   right: 48px;
 }
 
-.textDonaciones p{
+.textDonaciones p {
   display: none;
 }
 
-.btnQuieroAyudar{
-margin-top: 10px;
-padding: 15px;
-background-color: var(--naranjaOscuro-color);
-border: none;
-border-radius: 10px;
-color: var(--blanco-color);
+.btnQuieroAyudar {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: var(--naranjaOscuro-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--blanco-color);
 }
 
 .btnQuieroAyudar:hover {
@@ -184,62 +214,103 @@ color: var(--blanco-color);
 
 /* SECCIÓN SOBRE NOSOTROS */
 
-.sobreJampa{
-  background-color:var(--azul-color);
+.sobreJampa {
+  background-color: var(--azul-color);
   width: 100%;
   color: var(--blanco-color);
   padding: 40px;
 }
 
-.sobreJampaTextos{
-align-items: center;
-justify-content: center;
-text-align: center;
-border-color: var(--blanco-color);
-border-width: 2px;
-border-style: solid;
-padding: 30px;
+.sobreJampaTextos {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-color: var(--blanco-color);
+  border-width: 2px;
+  border-style: solid;
+  padding: 30px;
 }
 
-.sobreJampa h3{
+.sobreJampa h3 {
   padding-bottom: 15px;
   font-size: 33px;
 }
 
-.sobreJampa p{
+.sobreJampa p {
   padding-bottom: 15px;
   font-size: 16px;
 }
 
-.masInfo{
-font-size: 16px;
+.masInfo {
+  font-size: 16px;
 }
 
-.sobreJampa a{
+.sobreJampa a {
   text-decoration: none;
   color: var(--naranjaOscuro-color);
 }
 
-
 /* SECCIÓN ESTADISTICAS */
-.estadisticas{
+.estadisticas {
   background-color: var(--naranjaOscuro-color);
   color: var(--blanco-color);
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content:space-around ;
+  justify-content: space-around;
   text-align: center;
   gap: 20px;
   box-shadow: 10px 15px 40px rgb(146, 146, 146);
 }
 
-
 /* Estilos para tablet */
 @media (min-width: 659px) {
+  .textoBanner {
+    top: 60%;
+    left: 53%;
+  }
+
+  .contenedorTarjetasHome {
+    width:90%;
+   }
+
+   .textDonaciones {
+    width: 40%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    right: 80px;
+  }
+
 }
 
 /* Estilos para escritorio */
-@media(min-width: 1250px) {
+@media (min-width: 1250px) {
+
+  /* SECCION DEL BANNER */
+  .bannerImg{
+    height: 550px;
+  }
+
+  .textoBannerWeb {
+    display: flex;
+  }
+
+  .textDonaciones {
+    width: 22%;
+    top: 240px;
+    right:28%;
+  }
+
+  .sobreJampa {
+    padding: 70px 250px;
+  }
+
+  .sobreJampaTextos {
+    padding: 50px;
+  }
+
+  .masInfo{
+    font-size: 25px;
+   } 
 }
