@@ -6,7 +6,7 @@ mainCarrito.innerHTML = `
 <div class="contenedorProductos">
     <div class="contenedorCards">
         <div class="cardProducto">
-            <img src="https://splingsport.com.co/wp-content/uploads/2022/07/WhatsApp-Image-2020-10-28-at-5.28.33-PM-4.jpeg" alt="Conjunto verde olivo">
+            <img src="https://i.postimg.cc/0NGTpktG/Ref-1-Casual-Gris-Claro.png" alt="Conjunto verde olivo">
             <div class="detallesProducto">
                 <h4>Nombre Producto 1</h4>
                 <p>Color: Azul</p>
@@ -24,7 +24,7 @@ mainCarrito.innerHTML = `
             </div>
         </div>
         <div class="cardProducto">
-            <img src="https://splingsport.com.co/wp-content/uploads/2022/07/WhatsApp-Image-2020-10-28-at-5.28.33-PM-4.jpeg" alt="Conjunto verde olivo">
+            <img src="https://i.postimg.cc/zf1mbbkX/Ref-1-Casual-Negro.png" alt="Conjunto verde olivo">
             <div class="detallesProducto">
                 <h4>Nombre Producto 2</h4>
                 <p>Color: Azul</p>
