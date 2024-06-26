@@ -11,8 +11,8 @@
 .contenedorBanner {
   background-color: blue;
   width: 100%;
+  box-sizing: border-box;
   position: relative;
-  /* overflow: hidden; */
 }
 
 .contenedorBanner img {
@@ -56,6 +56,70 @@
 
 /* PRODUCTOS */
 
+.productosDestacados{
+  background-color: aqua;
+  width: 100%;
+}
+
+.contenedorProducto{
+  background-color: blueviolet;
+  width:100%;
+  height: 400px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contenedorTarjetasHome{
+  width: 270px;
+  background-color: green;
+  overflow: hidden;
+}
+
+.contenedorTarjetasHomeJS{
+  background-color: pink;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.tarjetaProductoHome{
+  background: red;
+  width: 240px;
+  height: 350px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0 15px;
+  border-radius: 20px;
+}
+
+.tarjetaProductoHome p{
+width: 240px;
+text-align: center;
+
+}
+.imgTarjetaHome{
+  background-color: aqua;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgTarjetaHome img{
+  /* width: 100%; */
+  height: 100%;
+}
 
 /* DONACIONES */
 

@@ -9,6 +9,7 @@
   <!-- importacion de iconos -->
   <link rel="stylesheet" href="/maqueta/estilos/publico/home.css">
   <link rel="stylesheet" href="/maqueta/estilos/publico/carritoCompras.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -38,7 +39,14 @@
       <!-- PRODUCTOS DESTACADOS -->
       <section class="productosDestacados">
         <h2>PRODUCTOS</h2>
-        <div class="tarjetaProducto"></div>
+        <div class="contenedorProducto">
+          <div> <i class='bx bxs-chevron-left'></i> </div>
+          <div class="contenedorTarjetasHome" id="tarjetaProductoHome">
+            <div class="contenedorTarjetasHomeJS" id="contenedorTarjetasHomeJS"></div>
+
+          </div>
+          <div> <i class='bx bxs-chevron-right'></i></div>
+        </div>
       </section>
 
       <!-- DONACIONES -->
@@ -95,9 +103,10 @@
   </main>
 
   <!-- Se vincula el archivo js -->
-  <script src="/maqueta/componentes/publico/nav.js"></script>
-  <script src="/maqueta/componentes/publico/carritoComprasComponente.js"></script>
-  <script src="/maqueta/scripts/carritoCompras.js"></script>
+   <script src="../../componentes/publico/nav.js"></script>
+  <script src="../../componentes/publico/carritoComprasComponente.js"></script>
+  <script src="../../scripts/carritoCompras.js"></script>
+  <script src="../../scripts/home.js"></script>
 </body>
 
 </html>
