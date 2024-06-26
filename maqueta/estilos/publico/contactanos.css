@@ -10,18 +10,12 @@ Comenzar con mobile por buenas practicas */
 
 /* Primera seccion "banner (Jen) */
 .dj-banner {
-  margin: 10px 0;
-  /* Margen superior de 10px, sin margen lateral ni inferior */
-  width: 100%;
-  /* Ancho del 100% del contenedor padre */
+  margin: 10px 0;  /* Margen superior de 10px, sin margen lateral ni inferior */
+  width: 100%;  /* Ancho del 100% del contenedor padre */
 }
 
 /* Estilo para el fondo del banner */
 .dj-bg {
-  background-image: url(bg-img-banner.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 300px;
   position: relative;
@@ -29,10 +23,10 @@ Comenzar con mobile por buenas practicas */
 
 /* Estilo para la imagen dentro del banner */
 .dj-img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 /* Estilo para el texto dentro del banner */
@@ -81,7 +75,12 @@ Comenzar con mobile por buenas practicas */
   height: 380px;
   text-align: center;
 }
-
+.mapa iframe{
+  width: 90%; 
+  box-shadow: 0px 0px 10px 0px;
+  height:250px;
+  border-radius: 10px;
+}
 .textoMapa{
   margin: 15px;
 }
@@ -95,43 +94,40 @@ Comenzar con mobile por buenas practicas */
 /* Tercera seccion "Formulario (Jennifer)" */
 
 /* Contenedor exterior del formulario */
-
+.tituloFormulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  color: var(--azul-color);
+}
+.tituloFormulario h3{
+  font-size: 23px;
+}
 /* Contenedor exterior del formulario */
 .form_container_outer {
   width: 90%;
-  /* Reducir el ancho del contenedor */
-  max-width: 350px;
-  /* Ancho máximo del contenedor */
-  margin: 20px auto;
-  /* Centrar el contenedor horizontalmente con un margen superior de 20px */
-  background-color: #033E8C;
-  /* Color de fondo del contenedor */
-  border-radius: 20px;
-  /* Bordes redondeados para el contenedor */
-  overflow: hidden;
-  /* Asegura que los bordes redondeados se apliquen correctamente */
-  box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);
-  /* Sombra para un efecto de elevación */
+  max-width: 350px;  /* Ancho máximo del contenedor */
+  margin: 20px auto;/* Centrar el contenedor horizontalmente con un margen superior de 20px */
+  background-color: #033E8C;  /* Color de fondo del contenedor */
+  border-radius: 20px;  /* Bordes redondeados para el contenedor */
+  overflow: hidden;  /* Asegura que los bordes redondeados se apliquen correctamente */
+  box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);  /* Sombra para un efecto de elevación */
 }
-
 /* Contenedor interior del formulario */
 .form_container {
-  padding: 15px;
-  /* Espacio interior para el contenido */
-  display: grid;
-  /* Uso de grid layout */
-  gap: 0.8em;
-  /* Espacio entre los elementos del grid */
+  padding: 15px;  /* Espacio interior para el contenido */
+  display: grid;  /* Uso de grid layout */
+  gap: 0.8em;  /* Espacio entre los elementos del grid */
 }
-
 /* Estilos para los campos de entrada */
 .form_input {
-  font-size: 0.9rem;
-  /* Tamaño de fuente aumentado */
-  padding: 8px;
-  /* Reducir el espacio interior para los campos de entrada */
-  border-radius: 10px;
-  /* Bordes redondeados */
+  width: 100%;
+  font-size: 0.9rem; /* Tamaño de fuente aumentado */
+  padding: 8px;  /* Reducir el espacio interior para los campos de entrada */
+  border-radius: 10px;  /* Bordes redondeados */
+  margin: 5px;
 }
 
 /* Estilos específicos para el campo de mensaje */
@@ -322,40 +318,16 @@ Comenzar con mobile por buenas practicas */
 @media(min-width: 1250px) {
   /* Primera seccion "banner (Jen) */
   .dj-banner {
-    margin: 10px 0;
-    /* Margen superior de 10px, sin margen lateral ni inferior */
-    width: 100%;
-    /* Ancho del 100% del contenedor padre */
+    margin: 10px 0;    /* Margen superior de 10px, sin margen lateral ni inferior */
+    width: 100%;    /* Ancho del 100% del contenedor padre */
+    height: 500px;
   }
-
-  /* Estilo para el fondo del banner */
-  .dj-bg {
-    background-image: url(bg-img-banner.png);
-    /* Imagen de fondo */
-    background-repeat: no-repeat;
-    /* No repetir la imagen de fondo */
-    background-position: center;
-    /* Centrar la imagen de fondo */
-    background-size: cover;
-    /* Escalar la imagen de fondo para cubrir todo el contenedor */
-    width: 100%;
-    /* Ancho del 100% del contenedor padre */
-    height: 400px;
-    /* Altura fija de 400px */
-    position: relative;
-    /* Posición relativa para contener elementos posicionados absolutamente dentro de él */
-  }
-
   /* Estilo para la imagen dentro del banner */
   .dj-img {
-    display: block;
-    /* Hacer que el elemento se comporte como un bloque */
-    width: 100%;
-    /* Ancho del 100% del contenedor padre */
-    height: 100%;
-    /* Altura del 100% del contenedor padre */
-    object-fit: cover;
-    /* Escalar la imagen para cubrir el contenedor sin distorsionar */
+    display: block;/* Hacer que el elemento se comporte como un bloque */
+    width: 100%;/* Ancho del 100% del contenedor padre */
+    height: 515px;
+    object-fit: cover;/* Escalar la imagen para cubrir el contenedor sin distorsionar */
   }
 
   /* Estilo para el texto dentro del banner */
@@ -408,17 +380,22 @@ Comenzar con mobile por buenas practicas */
   
 /* SEGUNDA SECCIÓN */
   .mainEncuentranos{
-    height: 330px;
+    height: 550px;
   }
-  
-    /* Tercera seccion "Formulario (Jennifer)" */
-  
-    .mainFormulario{
-      position: relative;
-    }
-  /* Tercera seccion "Formulario (Jennifer)" */
-  /* Contenedor exterior del formulario */
+  .mapa iframe{
+    height: 400px;
 
+  }
+  /* Tercera seccion "Formulario (Jennifer)" */
+  .tituloFormulario{
+    height: 100px;
+  }
+  .tituloFormulario h3{
+    font-size: 23px;
+  }
+  .mainFormulario{
+    position: relative;
+  }
   .form_container_outer {
     width: 100%;
     /* Ancho del 100% del contenedor padre */
@@ -435,7 +412,6 @@ Comenzar con mobile por buenas practicas */
     box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);
     /* Sombra para un efecto de elevación */
   }
-
   /* Fila del formulario */
   .form_row {
     display: grid;
@@ -445,7 +421,6 @@ Comenzar con mobile por buenas practicas */
     grid-template-columns: 1fr 1fr;
     /* Dos columnas de igual ancho */
   }
-
   /* Estilos para los campos de entrada */
   .form_input {
     font-family: inherit;
@@ -463,7 +438,6 @@ Comenzar con mobile por buenas practicas */
     border-radius: 15px;
     /* Bordes redondeados */
   }
-
   /* Estilos específicos para el campo de mensaje */
   .form_input--message {
     resize: none;
@@ -477,7 +451,6 @@ Comenzar con mobile por buenas practicas */
     /* Ocupar dos columnas completas */
     grid-column: 1 / -1;
   }
-
   /* Estilos para el botón de envío */
   .form_cta {
     font-family: inherit;
