@@ -1,41 +1,46 @@
 import { usuariosLocal } from "./validaciones-input.js";
 
+const ingresarForm = document.getElementById("ingresarForm"),
+  correoIng = document.getElementById("correoIng"),
+  passwordIng = document.getElementById("passwordIng");
 
-// seleccionamos los los id de el HTML
-const ingresarForm = document.getElementById('ingresarForm'),
-    correoIng = document.getElementById('correoIng'),
-    passwordIng = document.getElementById('passwordIng');
+ingresarForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-console.log(correoIng)
+  let registroCorreoMinus = correoIng.value.toLowerCase();
+  if (usuariosLocal === null || registroCorreoMinus === "") {
+    return Swal.fire({
+      text: "Usuario y contraseña no registrados, por favor registrate",
+      confirmButtonColor: "#F27F0C",
+    });
+  }
 
-// validar el correo en consola
-console.log(correoIng)
+  usuariosLocal.map((usuario) => {
+    if (registroCorreoMinus !== usuario.correo) {
+      console.log(usuario.correo);
+      return Swal.fire({
+        text: "Correo no registrado",
+        confirmButtonColor: "#F27F0C",
+      });
+    }
 
-// escuchador funcion anonima
-ingresarForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // evita que el formulario se refresque
+    if (passwordIng.value != usuario.password) {
+      return Swal.fire({
+        text: "Contraseña invalida",
+        confirmButtonColor: "#F27F0C",
+      });
+    }
 
-    console.log(usuariosLocal.find((usuario) => {
-        if (correoIng.value != usuario.correo) {
-            // alerta desde la libreria Swal.fire
-            return Swal.fire({
-                text: "Correo no registrado",
-                confirmButtonColor: "#F27F0C",
-            });
-        } else if (passwordIng.value != usuario.password) {
-            return Swal.fire({
-                text: "Contraseña invalida",
-                confirmButtonColor: "#F27F0C",
-            })
-        } else if (correoIng.value === usuario.correo && passwordIng.value === usuario.password) {
-            return Swal.fire({
-                text: "Ingresaste exitosamente",
-                confirmButtonColor: "#F27F0C",
-            }).then(()=>{/* con .then seguido del callback tendra la funcion de direccionar al usuario al inicio*/
-                window.location.href ='/maqueta/paginas/publico/home.html'
-            })
-        } else {
-            return
-        }
-    }))
-})
+    if (
+      registroCorreoMinus === usuario.correo &&
+      passwordIng.value === usuario.password
+    ) {
+      return Swal.fire({
+        text: "Ingresaste exitosamente",
+        confirmButtonColor: "#F27F0C",
+      }).then(() => {
+        window.location.href = "/maqueta/paginas/publico/home.html";
+      });
+    }
+  });
+});
