@@ -1,18 +1,13 @@
 let nombres = document.getElementById("nombres");/* se llama los id del html */
 let llamar = localStorage.getItem("productos"); /* llamamos el localStorage suministrado */ 
-console.log(llamar);
 
 let convertir = JSON.parse(llamar)/* convertimos el string importado a formato JSON */
-console.log(convertir);
 
 /* Recorremos de esta manera el objeto de producto, debido a su estructura y gerarquia, entramos al objeto luego
 al arreglom luego iteramos sobre el arreglo para poder entrar al elemento que queremos llamar. */
 for (categoria in convertir){
-    console.log(categoria);
     for( tipo in convertir[categoria]){
-        console.log(tipo);
         convertir[categoria][tipo].forEach(element => {
-            console.log(element);
             nombres.innerHTML=`
             <h1>${element.nombre}</h1>
             <h1>${element.producto_id}</h1>
@@ -227,10 +222,8 @@ for (categoria in convertir){
 
 /* for(producto in convertir){
 
-    console.log(producto);
 
     convertir[producto].forEach(element => {
-        console.log(element);
     nombres.innerHTML=`
         <h1>${element.nombre}</h1>
     `

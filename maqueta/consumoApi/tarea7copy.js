@@ -235,28 +235,18 @@ const inputStock = document.getElementById("stock")
 const formulario = document.getElementById("formulario")
 const boton = document.getElementById("boton")
 
-boton.addEventListener("click", ()=>{
-  console.log("hola");
-})
-
 /* function clickEnboton(event){
   event.preventDefault();
-  console.log(inputNombreProducto.value);
 } */
 
 /* formulario.addEventListener("submit",(event)=>{
   event.preventDefault(); //evita que se envie el formulario y se actualice la pagina.
-  console.log("hola mama estoy triunfando");
 }) */
-
-/* console.log(formulario);
- */
 
 
 
 
 men.forEach(product => {
-  /*   console.log(product); */
     productCard.innerHTML+= `
     <div class="principal">
     <h1>${product.name}</h1>
@@ -265,10 +255,4 @@ men.forEach(product => {
     </div>
     </div>
     `   
-}); 
-women.forEach(product => {
-  /*   console.log(product); */
-}); 
-children.forEach(product => {
-   /*  console.log(product); */
 }); 

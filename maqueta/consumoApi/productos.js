@@ -6,7 +6,7 @@ let indicadorPagina = document.getElementById("indicadorPagina");
 let elemtPorPagina = 3; // Número de productos por página
 let llamar = localStorage.getItem("productos"); /* llamamos el localStorage suministrado */ 
 let convertir = JSON.parse(llamar)/* convertimos el string importado a formato JSON */
-console.log(convertir);
+
 /* Recorremos de esta manera el objeto de producto, debido a su estructura y gerarquia, entramos al objeto luego
 al arreglom luego iteramos sobre el arreglo para poder entrar al elemento que queremos llamar. */
 for (categoria in convertir){
@@ -37,9 +37,7 @@ function mostrarContenido(){
 
 siguiente.addEventListener("click", ()=>{
     pagina +=1;
-    console.log("si funciona");
 });
 atras.addEventListener("click", ()=>{
     pagina -=1;
-    console.log("super funciona");
 });

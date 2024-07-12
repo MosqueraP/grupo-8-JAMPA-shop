@@ -215,14 +215,13 @@ const productosJAMPA = {
       }
     ]
   }
-console.log(productosJAMPA);
+
 
 
 formulario.addEventListener("submit",(event)=>{
     event.preventDefault(); //evita que se envie el formulario y se actualice la pagina.
     let numAstrig = producto_id.toString();
-    console.log(producto_id);
-    console.log(productosJAMPA);
+
     
     const nuevoProducto ={
         "producto_id": producto_id,
@@ -242,7 +241,7 @@ formulario.addEventListener("submit",(event)=>{
             }
             
             
-            console.log(numAstrig);
+
             localStorage.setItem("numAstrig",JSON.stringify(nuevoProducto)) //guarda los productos, en la cache del navegador, se convierte en Strig para que lo reconozca
             const ver = JSON.parse(localStorage.getItem(numAstrig));
             productosJAMPA.masculino.push(ver);

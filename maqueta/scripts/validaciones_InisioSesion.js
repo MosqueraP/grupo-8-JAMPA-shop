@@ -17,7 +17,6 @@ ingresarForm.addEventListener("submit", (e) => {
 
   usuariosLocal.map((usuario) => {
     if (registroCorreoMinus !== usuario.correo) {
-      console.log(usuario.correo);
       return Swal.fire({
         text: "Correo no registrado",
         confirmButtonColor: "#F27F0C",

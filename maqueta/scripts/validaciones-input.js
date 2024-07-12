@@ -78,7 +78,6 @@ const nuevoUsuario = {
 } 
 
 usuarioRegistrados.push(nuevoUsuario);
-console.log(usuarioRegistrados) // verificar en consola
   
 registroForm.reset()
 
