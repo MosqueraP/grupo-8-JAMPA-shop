@@ -19,5 +19,5 @@ encabezadohead.innerHTML = `
     <a class='icoMenu'  href='#ham'><i class='bi bi-list'></i></a>
     <a class='icoCerrar' href='#'><i class='bi bi-x-lg'></i></a>
 </nav>
-<a class='icoUser' href=''><i class='bi bi-person'><p>Admin</p></i></a>
+<a class='icoUser' href='/maqueta/paginas/publico/login.html'><i class='bi bi-person'><p>Admin</p></i></a>
 </div>`
