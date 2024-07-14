@@ -12,6 +12,7 @@ let convertir = JSON.parse(llamar)/* convertimos el string importado a formato J
 // Función para paginacion
 function mostrarContenido(numPagina) {
     tarjeta.innerHTML = ''; // Limpiar contenido anterior
+    /* paginacion */
     let siguientePagina = (numPagina - 1) * elemtPorPagina;
     let paginaAnterior = siguientePagina + elemtPorPagina;
     let producMostrados = [];
@@ -22,6 +23,7 @@ function mostrarContenido(numPagina) {
             producMostrados = producMostrados.concat(convertir[categoria][tipo]);
         }
     }
+    /* integracion de paginacion junto con la integracion y de los productos */
     for (let i = siguientePagina; i < paginaAnterior && i < producMostrados.length; i++) {
         const element = producMostrados[i];
         tarjeta.innerHTML += `
@@ -32,17 +34,18 @@ function mostrarContenido(numPagina) {
             <h4 class="precio">$ ${element.precio}</h4>
             </div>
             <div class="opciones">
-                <button>COMPRAR</button>
-                <a href="#">Ver Detalle</a>
+                <button id="abre">Ver Detalle</button>
             </div>
             </div
         `;
     }
+    /* pagina atras */
     atras.addEventListener('click', function() {
         if (numPagina > 1) {
             mostrarContenido(numPagina - 1);
         }
     });
+    /* pagina siguiente */
     siguiente.addEventListener('click', function() {
         if (numPagina < totalPaginas) {
             mostrarContenido(numPagina + 1);
@@ -62,3 +65,5 @@ const totalPaginas = Math.ceil(totalproducMostrados / elemtPorPagina);
 
 // llamar la funcion y colocar 1 para cargar la primer tanda de productos
 mostrarContenido(1);
+
+console.log(abre);
