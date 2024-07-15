@@ -46,6 +46,7 @@ export function capturarDatosProducto(
     nombre: dataProducto.nombre,
     precio: dataProducto.precio,
     talla,
+    convertirCantidadProdutos,
   };
 
   // ESCUCHADOR PARA AUMENTAR O QUITAR PRODUCTOS
@@ -60,50 +61,99 @@ export function capturarDatosProducto(
     cantidadProductos.innerHTML = convertirCantidadProdutos;
     productoCarrito.convertirCantidadProdutos = convertirCantidadProdutos;
   });
+  
+  let arregloTarjetas = [];
+  let carritoLocal = JSON.stringify(localStorage.getItem("carrito"))
+  console.log(carritoLocal);
+  let productosTotalesCarrito = '';
 
   btnAgregar.addEventListener("click", () => {
+  
+  
     productoCarrito.talla = tallaProducto.value;
-    console.log(productoCarrito.talla);
+    let multiplicarValorProducto = productoCarrito.precio * productoCarrito.convertirCantidadProdutos;
 
-    let multiplicarValorProducto =
-      productoCarrito.precio * productoCarrito.convertirCantidadProdutos;
-
-    contenedorCards.innerHTML += `
-    <div class="cardProducto">
+    contenedorCards.innerHTML+=`
+    <div id="tarjetaPrtoId${dataProducto.producto_id}" class="cardProducto">
         <img src=${productoCarrito.imagen} alt="Conjunto verde olivo">
         <div class="detallesProducto">
             <h4>${productoCarrito.nombre}</h4>
             <p>Talla: ${productoCarrito.talla}</p>
             <p>Precio: ${productoCarrito.precio}</p>
             <div class="cantidadProducto">
-                <button class="btnRestar">-</button>
-                <span>${productoCarrito.convertirCantidadProdutos}</span>
-                <button id="btnSumarCarrito" class="btnAgregar">+</button>
+                <button id="btnRestar${dataProducto.producto_id}" class="btnRestar">-</button>
+                <span id="totalProductosCarrito${dataProducto.producto_id}">${productoCarrito.convertirCantidadProdutos}</span>
+                <button id="btnSumarCarrito${dataProducto.producto_id}" class="btnAgregar">+</button>
             </div>
             <div class="resumenCompra">
-                <p>Total: ${multiplicarValorProducto}</p>
-                <button id="btnEliminar" class="btnEliminar">Eliminar</button>
+                <p>Total: <span id="totalCarritoCompras">${multiplicarValorProducto}</span> </p>
+                <button id="btnEliminar${dataProducto.producto_id}" class="btnEliminar">Eliminar</button>
             </div>
         </div>
     </div>`;
+
+    console.log(productosTotalesCarrito);
+
+    // agregarProductosAlCarrito(arregloTarjetas, productosTotalesCarrito)
+    // console.log(arregloTarjetas);
+
+    localStorage.setItem("carrito", arregloTarjetas)
+
+    const tarjetaPrtoId = document.getElementById(`tarjetaPrtoId${dataProducto.producto_id}`);
+    const btnSumarCarrito = document.getElementById(
+      `btnSumarCarrito${dataProducto.producto_id}`
+    );
+    const totalProductosCarrito = document.getElementById(
+      `totalProductosCarrito${dataProducto.producto_id}`
+    );
+    const btnRestar = document.getElementById(
+      `btnRestar${dataProducto.producto_id}`
+    );
+    const btnEliminar = document.getElementById(
+      `btnEliminar${dataProducto.producto_id}`
+    );
+
+    const totalCarritoCompras = document.getElementById("totalCarritoCompras")
+
+    // const idProducto = tarjetaPrtoId.id.split("d")[1];
+    let infoSumarCarrito = 0;
+
+    // contenedorCards.addEventListener("click", (e) => {
+      // let clickId = e.target.id.split("").pop();
+
+      console.log(totalCarritoCompras);
+
+      // if(clickId === idProducto){
+
+        btnSumarCarrito.addEventListener("click", () => {
+          infoSumarCarrito = 1 + productoCarrito.convertirCantidadProdutos;
+          totalProductosCarrito.innerHTML = infoSumarCarrito;
+          productoCarrito.convertirCantidadProdutos = infoSumarCarrito;
+          totalCarritoCompras.innerHTML = infoSumarCarrito * productoCarrito.precio
+        });
+    
+        btnRestar.addEventListener("click", () => {
+          if (infoSumarCarrito > 0) {
+            infoSumarCarrito = infoSumarCarrito - 1;
+            totalProductosCarrito.innerHTML = infoSumarCarrito;
+            productoCarrito.convertirCantidadProdutos = infoSumarCarrito;
+            totalCarritoCompras.innerHTML = infoSumarCarrito * productoCarrito.precio
+          }
+        });
+    
+        btnEliminar.addEventListener("click", () => {
+          contenedorCards.innerHTML = ``;
+          console.log("eliminando");
+        });
+
+      // }
+    // });
+
+    console.log(arregloTarjetas);
+    
   });
-
-  // const btnEliminar = document.getElementById("btnEliminar");
-  // const btnSumarCarrito = document.getElementById("btnSumarCarrito");
-  // let sumarCarrito = 0;
-
-
-
-//   btnSumarCarrito?.addEventListener("click", ()=>{
-//     sumarCarrito++
-//     productoCarrito.convertirCantidadProdutos = sumarCarrito
-// console.log(sumarCarrito);
-// })
-
-
-//   btnEliminar.addEventListener("click", () => {
-//     contenedorCards.innerHTML = ``;
-
-//     console.log("click");
-//   });
 }
+
+// function agregarProductosAlCarrito(arregloTarjetas, producto){
+//   arregloTarjetas.push(producto)
+// }

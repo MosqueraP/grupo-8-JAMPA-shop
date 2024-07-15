@@ -25,7 +25,7 @@ export function mostrarProductoModal(idTarjeta, dataTarjeta) {
 
           <section class="colorCantidad">                                        
             <div id="restar" class="restar">-</div>
-            <p id="cantidadProductos">1</p>  
+            <p id="cantidadProductos"> 1 </p>  
             <div id="sumar" class="sumar">+</div>
           </section>
 
@@ -64,10 +64,11 @@ export function mostrarProductoModal(idTarjeta, dataTarjeta) {
     const restar = document.getElementById("restar");
     let cantidadProductos = document.getElementById("cantidadProductos");
 
+    console.log(cantidadProductos.innerHTML);
+
     // APERTURA MODAL
     inforProducto.style.display = "flex";
 
-  
 
     // PINTAR CARRITO
     capturarDatosProducto(btnAgregarCarrito, dataTarjeta, talla, sumar, restar, cantidadProductos)
