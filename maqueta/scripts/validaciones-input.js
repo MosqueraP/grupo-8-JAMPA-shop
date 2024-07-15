@@ -78,6 +78,7 @@ const nuevoUsuario = {
   "correo": correo.value,
   "password": password.value
 } 
+
 //console.log(nuevoUsuario) // verificar en consola
 
 usuarioRegistrados.push(nuevoUsuario);
@@ -86,6 +87,13 @@ console.log(usuarioRegistrados) // verificar en consola
 registroForm.reset()
 
 localStorage.setItem("nuevoUsuario", JSON.stringify(usuarioRegistrados))
+
+if(nuevoUsuario == nuevoUsuario){
+  return Swal.fire({
+    text: "Usuario registrado exitosamente",
+      confirmButtonColor: "#F27F0C"
+  })
+}
 
 
 });

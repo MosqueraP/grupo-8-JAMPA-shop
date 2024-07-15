@@ -21,7 +21,7 @@ ingresarForm.addEventListener('submit', (e) => {
                 text: "Bienvenido Administrador",
                 confirmButtonColor: "#F27F0C",
             }).then(()=>{/* con .then seguido del callback tendra la funcion de direccionar al usuario al inicio*/
-                window.location.href ='/maqueta/paginas/admin/homeAdmin.html'
+                window.location.href ='../../paginas/admin/homeAdmin.html'
             })   
         }else if (correoIng.value != usuario.correo) {
             // alerta desde la libreria Swal.fire
@@ -39,7 +39,7 @@ ingresarForm.addEventListener('submit', (e) => {
                 text: "Ingresaste exitosamente",
                 confirmButtonColor: "#F27F0C",
             }).then(()=>{/* con .then seguido del callback tendra la funcion de direccionar al usuario al inicio*/
-                window.location.href ='/maqueta/paginas/publico/home.html'
+                window.location.href ='../../paginas/publico/home.html'
             })
         }else{
             return
