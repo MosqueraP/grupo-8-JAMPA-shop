@@ -1,4 +1,4 @@
-const registroForm = document.getElementById("registroForm");
+const btnCrearCuenta = document.getElementById("btnCrearCuenta");
 const nombres = document.getElementById("nombres");
 const apellidos = document.getElementById("apellidos");
 const correo = document.getElementById("correo");
@@ -12,8 +12,7 @@ if(usuariosLocal != null){
   usuarioRegistrados = usuariosLocal
 }
 
-
-registroForm.addEventListener("submit", (e) => {
+btnCrearCuenta.addEventListener("click", (e) => {
   e.preventDefault();
 
   // VALIDACIÓN UN CAMPO VACIO
@@ -94,6 +93,8 @@ if(nuevoUsuario == nuevoUsuario){
       confirmButtonColor: "#F27F0C"
   })
 }
+
+
 
 
 });
