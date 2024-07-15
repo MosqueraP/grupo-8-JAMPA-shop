@@ -5,7 +5,6 @@ const indicadorPagina = document.getElementById("indicadorPagina");
 let atras = document.getElementById("atras");
 let siguiente = document.getElementById("siguiente");
 
-
 // TRAER BD LOCAL STORAGE
 let llamar = localStorage.getItem("productos");
 let convertir = JSON.parse(llamar);

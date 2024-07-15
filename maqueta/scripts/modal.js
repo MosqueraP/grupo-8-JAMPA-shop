@@ -1,79 +1,82 @@
-export function mostrarProductoModal (idTarjeta, dataTarjeta){
+import { capturarDatosProducto } from "../componentes/publico/carritoComprasComponente.js";
 
-  let inforProducto = document.getElementById("inforProducto")
+export function mostrarProductoModal(idTarjeta, dataTarjeta) {
+  let inforProducto = document.getElementById("inforProducto");
 
-// VALIDACIÓN ENTRE TARJETA PRODUCTO Y PRODUCTO BASE DE DATOS PARA MOSTRARLO EN EL MODAL EN CASO DE COINCIDIR
+  // VALIDACIÓN ENTRE TARJETA PRODUCTO Y PRODUCTO BASE DE DATOS PARA MOSTRARLO EN EL MODAL EN CASO DE COINCIDIR
   if (idTarjeta.includes(dataTarjeta.producto_id)) {
-
     // INYECCCIÓN DE HTML PARA MODAL
     inforProducto.innerHTML = `
       <div class="contenidoProducto" id="contenidoProducto"> 
+
         <div class="btnCerrar">
           <i id='cerrarModal' class="bi bi-x-circle"></i>
         </div>
+
         <div class="nombreProducto">
-                <h2>${dataTarjeta.nombre}</h2>
-                <img class="imgProducto" src='${dataTarjeta.imagen}'>
-                
+          <h2>${dataTarjeta.nombre}</h2>
+          <img class="imgProducto" src='${dataTarjeta.imagen}'>
         </div> 
-                  
         
         <div class="escritorio">     
-        <div class="descripcionProducto">
-        <h2>Descripción</h2>
-                  <h5>${dataTarjeta.descripcion}</h5>            
-        </div>
+          <div class="descripcionProducto">
+            <p>${dataTarjeta.descripcion}</p>            
+          </div>
 
-        <div class="colorCantidad">                                        
-              <label for="cantidad"> <strong> Cantidad:</strong></label>
-              <select id="cantidad">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="4">5</option>
-              </select><br>                
-        </div>
+          <section class="colorCantidad">                                        
+            <div id="restar" class="restar">-</div>
+            <p id="cantidadProductos">1</p>  
+            <div id="sumar" class="sumar">+</div>
+          </section>
 
-        <div class="tallas">                   
-                <label for="talla"> <strong>Talla:</strong></label>          
-                <input type="radio" id="L" name="tallas" value="L">
-                <label for="L">L</label>
-                <input type="radio" id="XL" name="tallas" value="XL">
-                <label for="XL">XL</label>
-                <input type="radio" id="XXL" name="tallas" value="XXL">
-                <label for="XXL">XXL</label>
-                <input type="radio" id="XXXL" name="tallas" value="XXL">
-                <label for="XXXL">XXXL</label>
+          <section id="tallaProducto" class="tallas">                           
+            <label for="talla"> <strong> Talla:</strong></label>
+            <select id="talla">
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+              <option value="XXXL">XXXL</option>
+            </select>   
+          </section>
+
+          <div class="precio">    
+            <h3>$ ${dataTarjeta.precio}</h3>
+          </div>
+
+          <div class="carrito">                    
+            <button id="btnAgregarCarrito">Agregar al carrito
+              <i class='bi bi-cart3'></i>
+            </button>                    
+          </div> 
+
+          <div class="frase">
+            <h4>No estás gordita, estás doblemente buen@😘</h4>
+          </div>  
         </div>
-        <div class="precio">    
-          <h2>$ ${dataTarjeta.precio}</h2>
-        </div>
-        <div class="carrito">                    
-                  <button><strong>Agregar al carrito</strong> 
-                  <i class='bi bi-cart3'></i>
-                  </button>                    
-        </div> 
-        </div>
-        <div class="frase">
-          <h4>No estás gordita, estás doblemente buena😘</h4>
-        </div>      
+        
       </div>`;
 
-      const contenidoProducto = document.getElementById("contenidoProducto")
-      const cerrarModal = document.getElementById("cerrarModal");
+    const contenidoProducto = document.getElementById("contenidoProducto");
+    const cerrarModal = document.getElementById("cerrarModal");
+    const btnAgregarCarrito = document.getElementById("btnAgregarCarrito");
+    const talla = document.getElementById("talla");
+    const sumar = document.getElementById("sumar");
+    const restar = document.getElementById("restar");
+    let cantidadProductos = document.getElementById("cantidadProductos");
 
-      // APERTURA MODAL
-      inforProducto.style.display = "flex";
+    // APERTURA MODAL
+    inforProducto.style.display = "flex";
 
-      // CIERRE MODAL
-      cerrarModal.addEventListener("click", () => {
-        contenidoProducto.classList.add(
-          "modalcerrado"
-        ); 
-          inforProducto.style.display = "none";
-          contenidoProducto.classList.remove("modalcerrado");
-      });
+  
+
+    // PINTAR CARRITO
+    capturarDatosProducto(btnAgregarCarrito, dataTarjeta, talla, sumar, restar, cantidadProductos)
+
+    // CIERRE MODAL
+    cerrarModal.addEventListener("click", () => {
+      contenidoProducto.classList.add("modalcerrado");
+      inforProducto.style.display = "none";
+      contenidoProducto.classList.remove("modalcerrado");
+    });
   }
-
 }
