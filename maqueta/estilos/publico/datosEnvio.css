@@ -99,7 +99,6 @@
 }
 /*ESTILOS LA ALERTA DEL MENSAJE DE CONFIRMACIÓN COMPRA*/
 .mensajeConfirmacion{
- 
     display: none;
     position: fixed;
     top: 50%;
