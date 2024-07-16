@@ -11,7 +11,7 @@ mainCarrito.innerHTML = `
     </div>
     <div class="carritoResumen">
         <button class="btnVaciarCarrito">Vaciar Carrito</button>
-        <h3>Total del Carrito: $100.000</h3>
+        <h3>Total del Carrito: $ <span id="totalizadoProductos"> </span> </h3>
         <button class="btnComprar">COMPRAR</button>
     </div>
 </div>
@@ -19,6 +19,7 @@ mainCarrito.innerHTML = `
 const contenedorCards = document.getElementById("contenedorCards");
 const btnAbrirCarrito = document.getElementById("btnAbrirCarrito");
 const btnCerrarCarrito = document.getElementById("btnCerrarCarrito");
+const totalizadoProductos = document.getElementById ("totalizadoProductos");
 
 // APERTURA Y CIERRE CARRITO DE COMPRAS
 btnAbrirCarrito.addEventListener("click", () => {
@@ -124,12 +125,14 @@ export function capturarDatosProducto(
       console.log(totalCarritoCompras);
 
       // if(clickId === idProducto){
+        totalizadoProductos.innerHTML=multiplicarValorProducto;
 
         btnSumarCarrito.addEventListener("click", () => {
           infoSumarCarrito = 1 + productoCarrito.convertirCantidadProdutos;
           totalProductosCarrito.innerHTML = infoSumarCarrito;
           productoCarrito.convertirCantidadProdutos = infoSumarCarrito;
           totalCarritoCompras.innerHTML = infoSumarCarrito * productoCarrito.precio
+          totalizadoProductos.innerHTML=infoSumarCarrito * productoCarrito.precio;
         });
     
         btnRestar.addEventListener("click", () => {
@@ -138,6 +141,7 @@ export function capturarDatosProducto(
             totalProductosCarrito.innerHTML = infoSumarCarrito;
             productoCarrito.convertirCantidadProdutos = infoSumarCarrito;
             totalCarritoCompras.innerHTML = infoSumarCarrito * productoCarrito.precio
+            totalizadoProductos.innerHTML=infoSumarCarrito * productoCarrito.precio;
           }
         });
     
@@ -145,6 +149,7 @@ export function capturarDatosProducto(
           contenedorCards.innerHTML = ``;
           console.log("eliminando");
         });
+
 
       // }
     // });
