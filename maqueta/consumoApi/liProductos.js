@@ -8,7 +8,6 @@ async function consuApi(){
     const catwomen = data.products.women
 
     for(let i = 0; i < catMen.length; i++){
-        /* console.log(catMen[i]);  
         productCard.innerHTML+=`
         <div class="principal">
         <h2>${catMen[i].name}</h2>

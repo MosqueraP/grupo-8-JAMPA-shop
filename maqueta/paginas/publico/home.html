@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="/maqueta/estilos/publico/footer.css">
   <link rel="stylesheet" href="/maqueta/estilos/publico/carritoCompras.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/maqueta/estilos/publico/modal.css">
 </head>
 
 <body>
@@ -27,7 +29,8 @@
         <div class="bannerImg">
           <div class="textoBanner">
             <h1>ENCUENTRA TU ESTILO </h1>
-            <p class="textoBannerWeb">Explora nuestra exclusiva colección de ropa Plus Size para hombres y mujeres. Porque
+            <p class="textoBannerWeb">Explora nuestra exclusiva colección de ropa Plus Size para hombres y mujeres.
+              Porque
               la moda no tiene talla, descubre prendas que realzan tu estilo y te hacen sentir increíble.</p>
             <button class="btnProductos">PRODUCTOS</button>
           </div>
@@ -91,23 +94,21 @@
       </section>
     </section>
 
-
-
-
-
-    <!-- Footer -->
     <footer class="footer">
     </footer>
+
     <section class="mainCarrito" id="mainCarrito"></section>
+
+    <section class="inforProducto" id="inforProducto"></section>
   </main>
 
   <!-- Se vincula el archivo js -->
-   <script src="../../componentes/publico/nav.js"></script>
-   <script src="../../componentes/publico/carritoComprasComponente.js"></script>
-   <script src="../../scripts/carritoCompras.js"></script>
+  <script src="../../componentes/publico/nav.js"></script>
+  <script src="../../componentes/publico/carritoComprasComponente.js " type="module"></script>
   <script src="/maqueta/consumoApi/ejeLocalStorage.js" type="module"></script>
-  <script src="../../scripts/home.js"></script>
-  <script src="/maqueta/componentes/publico/footer.js"></script>
+  <script src="../../scripts/carritoCompras.js" type="module"></script>
+  <script src="../../scripts/home.js" type="module"></script>
+  <script src="../../scripts/modal.js" type="module"></script>
 </body>
 
 </html>

@@ -229,7 +229,6 @@ women.push(nuevoProducto)
 children.push(nuevoProducto)
 
 men.forEach(product => {
-    console.log(product);
     productCard.innerHTML+= `
     <div class="principal">
     <h1>${product.name}</h1>
@@ -238,10 +237,4 @@ men.forEach(product => {
     </div>
     </div>
     `   
-}); 
-women.forEach(product => {
-    console.log(product);
-}); 
-children.forEach(product => {
-    console.log(product);
 }); 

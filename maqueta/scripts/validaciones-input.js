@@ -6,12 +6,10 @@ const password = document.getElementById("password");
 const passwordconf = document.getElementById("passwordconf");
 let usuarioRegistrados = [];
 export const usuariosLocal = JSON.parse(localStorage.getItem("nuevoUsuario"));
-// console.log(usuariosLocal)
 
 if(usuariosLocal != null){
   usuarioRegistrados = usuariosLocal
 }
-
 
 registroForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -75,13 +73,11 @@ registroForm.addEventListener("submit", (e) => {
 const nuevoUsuario = {
   "nombres": nombres.value,
   "apellidos": apellidos.value,
-  "correo": correo.value,
+  "correo": correo.value.toLowerCase(),
   "password": password.value
 } 
-//console.log(nuevoUsuario) // verificar en consola
 
 usuarioRegistrados.push(nuevoUsuario);
-console.log(usuarioRegistrados) // verificar en consola
   
 registroForm.reset()
 
