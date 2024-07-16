@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8080/api/v1/usuarios";
+/* const baseURL = "http://localhost:8080/api/v1/usuarios";
 
 
 document.getElementById("btnCrearCuenta").addEventListener("click", function(event) {
@@ -77,3 +77,4 @@ async function traerTodosClientes() {
     }
 }
 console.log(cliente);
+ */
