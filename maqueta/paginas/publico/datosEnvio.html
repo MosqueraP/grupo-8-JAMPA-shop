@@ -20,7 +20,7 @@
         </header>
         <!-- DIV PRINCIPAL DE PAG DATOS DE ENVÍO -->
         <div class="contenidoTotal">
-            
+            <h2 style="text-align: center;">Ingrese la información para la entrega de su compra</h2>
         <div class="carritoFinal">
             <!-- DIV CON MENSAJE DE CONFIRMACIÓN DE COMPRA  -->
             <div class="mensajeConfirmacion" id="mensajeConfirmacion" style="display: none;">
@@ -38,7 +38,7 @@
                     <h2>Datos de Envío</h2>
                 </div>
                 <!--FORMULARIO DE DATOS-->
-                <form id="formDatos" class="formDatos">
+                <form id="formDatos" class="formDatos"> 
                 <div class="formDatos">                    
                         <div class="nombre">
                             <input type="text" name="nombre" id="nombre" required>
@@ -65,7 +65,7 @@
                         </div>
                     
                         <div class="botonConfCompra">
-                            <input type="submit" value="Confirmar Compra">
+                            <input id="btnConfirmarCompra" type="submit" value="Confirmar Compra">
                        </div>
                       
                     </form>
@@ -89,6 +89,7 @@
     <script src="/maqueta/consumoApi/ejeLocalStorage.js" type="module"></script>
     <script src="/maqueta/scripts/datosEnvio.js"></script>
     <script src="/maqueta/componentes/publico/footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.js" integrity="sha512-EETzuDes5NYDQpuTl1crNKcXk4ExLa3AUNNQJtqJsZ2Q9TTCSglaFI315jWZsZ/7lo9iSpBD5Dj67WE0vdP1ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
