@@ -156,6 +156,10 @@ html::-webkit-scrollbar-thumb{
   height: 35px;
   margin: 20px 0;
 }
+.btnComprar a{
+  color: var(--blanco-color);
+  font-size: 15px;
+}
 
 /* RESPONSIVE TABLET  */
 /* CONTENEDOR MAIN CARRITO DE COMPRAS */

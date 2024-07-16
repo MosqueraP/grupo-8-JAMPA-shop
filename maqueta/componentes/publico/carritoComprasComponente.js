@@ -12,7 +12,7 @@ mainCarrito.innerHTML = `
     <div class="carritoResumen">
         <button class="btnVaciarCarrito">Vaciar Carrito</button>
         <h3>Total del Carrito: $ <span id="totalizadoProductos"> </span> </h3>
-        <button class="btnComprar">COMPRAR</button>
+            <button class="btnComprar" ><a href="../../paginas/publico/datosEnvio.html">COMPRAR</a></button>
     </div>
 </div>
 `;
